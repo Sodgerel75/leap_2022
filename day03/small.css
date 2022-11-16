@@ -1,0 +1,17 @@
+body {
+    background-color: orange;
+}
+
+img {
+    max-width: 400px;
+
+}
+
+#text1, #text2, #text4 {
+    display: none;
+}
+
+
+#text3 {
+    display: block;
+}

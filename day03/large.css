@@ -1,0 +1,42 @@
+body {
+    background-color: blue;
+}
+
+img {
+    max-width: 800px;
+}
+
+.text-container div {
+    margin: 10px;
+    width: 300px;
+}
+
+.text-container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-size: 30px;
+}
+
+p {
+    text-align: center;
+}
+
+#text1 {
+    display: block;
+}
+
+#text2 {
+    display: none;
+}
+
+#text3 {
+    display: none;
+}
+
+#text4 {
+    display: none;
+}

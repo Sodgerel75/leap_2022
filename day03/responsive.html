@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" media="all" href="large.css">
+    <link rel="stylesheet" media="(max-width: 768px)" href="medium.css">
+    <link rel="stylesheet" media="(max-width: 570px)" href="small.css">
+</head>
+
+<body>
+
+   <div class="text-container">
+
+    <picture>
+        <source srcset="test.jpg" media="(min-width: 800px)">
+        <source srcset="test2.jpg" media="(min-width: 600px)">
+        <img src="test.jpg" alt="cat">
+    </picture>
+
+
+
+    
+        <div id="text1">
+            <p>xxl (extra extra large)</p>
+        </div>
+        <div id="text2">
+            <p>xl (extra large)</p>
+        </div>
+        <div id="text3">
+            <p>lg (large)</p>
+        </div>
+        <div id="text4">
+            <p>md (medium)</p>
+        </div>
+ 
+   </div>
+</body>
+
+</html>

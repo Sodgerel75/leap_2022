@@ -1,0 +1,23 @@
+body {
+    background-color: red;
+}
+
+img {
+    max-width: 680px;
+}
+
+#text1 {
+    display: none;
+}
+
+#text2 {
+    display: block;
+}
+
+#text3 {
+    display: none;
+}
+
+#text4 {
+    display: none;
+}
