@@ -19,7 +19,7 @@
 .col-img {
     width: 45%;
     height: 500px;
-    background: url(pic1.png) center / cover;
+    background-image: url(pic1.png) no-repeat cover;
 
 }
 
