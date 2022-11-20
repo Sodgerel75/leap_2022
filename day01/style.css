@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(137, 176, 223);
+}
+
+.col1 h3 {
+  color: rgb(38, 84, 157);
+}
+
+.container {
+  display: flex;
+  max-width: 700px;
+  border-radius: 10px;
+  margin: 0 auto;
+  background-color: azure;
+}
+
+.col1 {
+  background-color: white;
+  width: 50%;
+  border-radius: 10px;
+  padding: 30px;
+
+}
+
+.names {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col2 {
+  background-color: rgb(58, 58, 193);
+  color: white;
+  width: 50%;
+  border-radius: 0 10px 10px 0;
+  padding: 30px;
+}
+
+.col2 input[type=checkbox] {
+  width: 20px;
+}
+
+.col1 input[type=date] {
+  color: gray;
+}
+
+input {
+  padding: 5px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+  background-color: transparent;
+  margin-right: 20px;
+}
+
+.col1 select {
+  color: gray;
+}
+
+
+select {
+  width: 100%;
+  background: transparent;
+  color: white;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 5px;
+}
+
+.col1 ::placeholder {
+  color: gray;
+}
+
+
+
+.col2 ::placeholder {
+  color: white;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.agree {
+  font-size: 11px;
+}
