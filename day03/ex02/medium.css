@@ -1,12 +1,8 @@
 body {
-    background-color: red;
+    background-color: rgb(255, 72, 0);
 }
 
-img {
-    max-width: 680px;
-}
-
-#text1 {
+#text0, #text1, #text3, #text4, #text5 {
     display: none;
 }
 
@@ -14,10 +10,9 @@ img {
     display: block;
 }
 
-#text3 {
-    display: none;
-}
-
-#text4 {
-    display: none;
+.text-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

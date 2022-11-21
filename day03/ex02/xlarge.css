@@ -1,12 +1,12 @@
 body {
-    background-color: rgb(255, 0, 81);
+    background-color: rgb(208, 0, 255);
 }
 
-#text0, #text1, #text2, #text4, #text5 {
+#text0, #text1, #text2, #text3, #text5 {
     display: none;
 }
 
-#text3 {
+#text4 {
     display: block;
 }
 
