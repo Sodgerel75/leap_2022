@@ -10,35 +10,42 @@
 </head>
 
 <body>
-  <h1>My Beautiful Form</h1>
-  <div class="form-container">
+  <fieldset class="form-container">
+    <legend>Hi form</legend>
     <form action="result.html" id="beautiful-form">
-      <label for="first-name">Last Name</label>
-      <input type="text" name="last-name" placeholder="Овог">
-      <input type="text" name="first-name" placeholder="Нэр">
-      <input type="email" name="email" placeholder="И-мэйл">
-      <input type="number" name="Phone" placeholder="Утас">
-      <input type="password" name="password" placeholder="Нууц үг">
-      <input type="password" name="password" placeholder="Дахин нууц үг">
-      <div class="gender">
-        <input type="radio" name="gender">
-        <label for="gender">Эрэгтэй</label>
-        <input type="radio" name="gender">
-        <label for="gender">Эмэгтэй</label>
-      </div>
-      <input type="time" name="birt-date-time" id="">
-      <input type="date" name="birt-date" id="">
-      <select name="" id="">
-        <option>Монгол</option>
-        <option>Гадаад</option>
-        <option>Харь Гариг</option>
+      <label for="first-name">Нэр</label>
+      <input type="text" name="first-name"><br>
+      <label for="name1">Овог</label>
+      <input type="email" name="name1"><br>
+      <label for="name1">И-мэйл</label>
+      <input type="email" name="name1"><br>
+      <label for="name1">Утас</label>
+      <input type="email" name="name1"><br>
+      <label for="name1">Нас</label>
+      <input type="email" name="name1"><br>
+      <label for="name1">Төрсөн өдөр</label>
+      <input type="date" name="name1"><br>
+      <label for="name1">Хүйс</label>
+      <select name="huis" id="">
+        <option value="">Сонгох</option>
+        <option value="">Эр</option>
+        <option value="">Эм</option>
       </select>
-      <textarea name="address" id="" cols="35" rows="19">About</textarea>
-      <input type="submit" value="Submit">
-      <button type="submit">Submit</button>
     </form>
-
-  </div>
+    <div class="mes">
+      <div>
+        <labelfor="address">Тодорхойлолт</label>
+      </div>
+      <textarea name="address" id="" cols="38" rows="10"></textarea>
+    </div>
+    <div class="row">
+      <div>
+        <p style="width: 90px;">Сурагч эсэх</p>
+      </div>
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+      <div><label for="vehicle1">Тийм</label>
+      </div>
+  </fieldset>
 </body>
 
 </html>
