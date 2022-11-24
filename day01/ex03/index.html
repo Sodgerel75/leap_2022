@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sodoo</title>
+  <style>
+    input {
+      margin-top: 3px;
+      margin-bottom: 6px;
+    }
+
+    select {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    fieldset {
+      text-align: center;
+      background-color: rgb(240, 245, 255);
+    }
+
+    .container {
+      background-color: rgb(240, 245, 255);
+      border: 2px dashed red;
+      padding: 10px;
+      width: 500px;
+      text-align: center;
+    }
+
+    .content {
+      background-color: rgb(247, 1, 83);
+      color: white;
+      width: 500px;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Travel Reservation Form</h1>
+  <p><b>* denotes mandotory</b></p>
+  <form action="#">
+    <label for="fname">Full name*:</label><br>
+    <input name="fname" type="text" placeholder="FirstName LastName"><br>
+    <label for="email">Email address*:</label><br>
+    <input name="email" type="text" placeholder="Email address"><br>
+    <label for="tour">Select Tour Package*:</label><br>
+    <select name="tour" id="">
+      <option value="country1">Mongolia</option>
+      <option value="country2">USA</option>
+      <option value="country3">Canada</option>
+    </select><br>
+    <label for="date">Arrival date*:</label><br>
+    <input name="date" type="text" placeholder="m/d/y"><br>
+    <label for="number">Number of persons*:</label><br>
+    <input name="number" type="text" placeholder="Number">
+    <p>What would you want to avail?*</p>
+    Boarding<input type="checkbox"><br>
+    Fooding<input type="checkbox"><br>
+    Sight seeing<input type="checkbox"><br>
+    <label for="number">Dicount Coupon Code*:</label><br>
+    <input name="number" type="text" placeholder="Number"><br>
+    <label for="number">Terms and conditions*:</label><br>
+    <input type="radio" name="terms" value="HTML">
+    <label for="html">I agree</label>
+    <input type="radio" name="terms" value="CSS">
+    <label for="css">I disagree</label><br>
+    <input type="submit" value="Complete Reservation">
+  </form>
+
+  <p class="content">Welcome to the 24x7 Fitness Club: Courts Reservation Page!</p>
+  <div class="container">
+    <form action="#">
+      <fieldset>
+        <legend>Member Demographics</legend>
+        <label for="fname">Name</label>
+        <input name="fname" type="text" placeholder="">
+        <p>Are you a Member ?</p>
+        <input type="radio" name="mem" value="HTML">
+        <label for="html">Member</label>
+        <input type="radio" name="mem" value="CSS">
+        <label for="css">Non-member</label><br>
+        <label for="emailadd">Email</label>
+        <input name="emailadd" type="email" placeholder="">
+      </fieldset>
+      <label for="sport">Facility</label>
+      <select name="sport" id="">
+        <option value="sport1">Badminton</option>
+        <option value="sport2">Handball</option>
+        <option value="sport3">Football</option>
+      </select><br>
+      <label for="date">Select a reservation date and time:</label><br>
+      <input type="date"><input type="time"><br>
+      <input type="checkbox" name="agree">
+      <label for="agree">I agree to the club's reservation policy</label><br>
+      <input type="button" value="SUBMIT">
+    </form>
+  </div>
+
+
+</body>
+
+</html>
