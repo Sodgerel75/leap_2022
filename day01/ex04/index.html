@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sodoo</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-image: url(back.png);
+      background-color: rgb(255, 194, 250);
+      background-blend-mode: multiply;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      width: 100wh;
+      color: white;
+    }
+
+    .yur input {
+      width: 100%;
+      margin-top: 3px;
+      margin-bottom: 6px;
+      padding: 5px;
+    }
+
+    .yur input[required] {
+      border: 2px solid rgb(0, 255, 21);
+
+    }
+
+    fieldset {
+      padding: 30px 10px;
+    }
+
+    select {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      background-color: rgba(94, 60, 133, 0.5);
+      border-radius: 5px;
+      padding: 10px;
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    #buttonil {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+    }
+
+    h2,
+    p {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Social Media хэрэглэгчдийн судалгаа</h2>
+  <p>Судалгаанд орцсон танд баярлалаа.</p>
+  <div class="container">
+    <form action="#">
+      <fieldset class="yur">
+        <legend>Ерөнхий Мэдээлэл</legend>
+        <label for="fname">Нэр</label><br>
+        <input name="fname" type="text" placeholder="" required><br>
+        <label for="emailadd">И-мэйл</label><br>
+        <input name="emailadd" type="email" placeholder="" required><br>
+        <label for="nas">Нас</label><br>
+        <input name="nas" type="number" min="14" max="99" placeholder="">
+      </fieldset>
+      <fieldset>
+        <legend>Social Media</legend>
+        <label for="sport">Та өдөрт хэдэн цаг Social Media ашигладаг вэ?</label><br>
+        <select name="sport" id="">
+          <option value="sport1">1 - 2цаг</option>
+          <option value="sport2">3 - 4цаг</option>
+          <option value="sport3">5 - 6цаг</option>
+        </select><br>
+        Та онлайнаар худалдан авалт хийж, дэлгүүр орж худалдан авалт хийхийн алийг нь илүүд үздэг вэ?<br>
+        <input type="radio" name="terms" value="HTML">
+        <label for="html">Онлайн худалдан авалт</label><br>
+        <input type="radio" name="terms" value="CSS">
+        <label for="css">Дэлгүүр орж худалдан авалт хийх</label><br><br>
+        Та ямар Social Media Platform ашигладаг вэ?<br>
+        <input type="checkbox">Facebook<br>
+        <input type="checkbox">Instagram<br>
+        <input type="checkbox">Twitter<br>
+        <input type="checkbox">Reddit<br>
+        <input type="checkbox">Snapchat<br>
+        <input type="checkbox">Quora<br>
+        <input type="checkbox">Youtube<br>
+        <input type="checkbox">Бусад<br>
+      </fieldset>
+      Санал хүсэлт<br>
+      <textarea name="area" id="" cols="65" rows="10" placeholder="Санал хүсэлтээ бичнэ үү..."></textarea><br>
+      <input id="buttonil" type="submit" value="Илгээх">
+    </form>
+  </div>
+</body>
+
+</html>
