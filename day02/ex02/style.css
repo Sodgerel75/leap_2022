@@ -1,0 +1,41 @@
+.con {
+  max-width: 300px;
+  height: 300px;
+  margin: 50px auto;
+}
+
+.btn {
+  position: relative;
+  background-color: rgb(170, 170, 170);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  text-align: center;
+  transition: background-color 1s ease-in-out;
+}
+
+.btn:hover {
+  background-color: red;
+}
+
+.badge {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  padding: 5px;
+  color: white;
+  border-radius: 50%;
+  right: -10px;
+  top: -10px;
+  transition-duration: 1s;
+}
+
+.btn:hover .badge {
+  transform: translate(-80px, 10px);
+  color: red;
+  z-index: -1;
+}
