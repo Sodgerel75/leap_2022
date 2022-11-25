@@ -30,9 +30,12 @@
       padding: 5px;
     }
 
-    .yur input[required] {
-      border: 2px solid rgb(0, 255, 21);
+    .yur input:required {
+      border-color: rgb(85, 254, 85);
+    }
 
+    .yur input:required:invalid {
+      border-color: rgb(255, 46, 70);
     }
 
     fieldset {
@@ -64,6 +67,10 @@
     p {
       text-align: center;
     }
+
+    textarea::placeholder {
+      padding: 50px 30px;
+    }
   </style>
 </head>
 
@@ -79,7 +86,7 @@
         <label for="emailadd">И-мэйл</label><br>
         <input name="emailadd" type="email" placeholder="" required><br>
         <label for="nas">Нас</label><br>
-        <input name="nas" type="number" min="14" max="99" placeholder="">
+        <input name="nas" type="number" min="14" max="99" placeholder="" required>>
       </fieldset>
       <fieldset>
         <legend>Social Media</legend>
@@ -105,7 +112,8 @@
         <input type="checkbox">Бусад<br>
       </fieldset>
       Санал хүсэлт<br>
-      <textarea name="area" id="" cols="65" rows="10" placeholder="Санал хүсэлтээ бичнэ үү..."></textarea><br>
+      <textarea name="area" id="" cols="68" rows="10" maxlength="300"
+        placeholder="Санал хүсэлтээ бичнэ үү..."></textarea><br>
       <input id="buttonil" type="submit" value="Илгээх">
     </form>
   </div>
