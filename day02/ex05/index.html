@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sodgerel</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      border: 1px solid gray;
+      margin: 0 auto;
+    }
+
+    .red {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(255, 60, 60);
+      transition-duration: 1s;
+    }
+
+    .container:hover .red {
+      transform: translate(140px, 140px);
+      background-color: rgb(255, 200, 49);
+    }
+
+    .red2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(255, 60, 60);
+      transition-duration: 1s;
+    }
+
+    .container:hover .red2 {
+      transform: translate(-140px, 140px);
+      background-color: rgb(255, 200, 49);
+    }
+
+    .red3 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(255, 60, 60);
+      transition-duration: 1s;
+    }
+
+    .container:hover .red3 {
+      transform: translate(140px, -140px);
+      background-color: rgb(255, 200, 49);
+    }
+
+    .red4 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(255, 60, 60);
+      transition-duration: 1s;
+    }
+
+    .container:hover .red4 {
+      transform: translate(-140px, -140px);
+      background-color: rgb(255, 200, 49);
+    }
+
+    .white1 {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(255, 255, 255);
+      left: 140px;
+      top: 140px;
+      box-shadow: 1px 1px 8px 10px rgba(197, 197, 197, 0.2);
+    }
+
+    .white2 {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(255, 255, 255);
+      right: 140px;
+      top: 140px;
+      box-shadow: 1px 1px 8px 10px rgba(197, 197, 197, 0.2);
+    }
+
+    .white3 {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(255, 255, 255);
+      left: 140px;
+      bottom: 140px;
+      box-shadow: 1px 1px 8px 10px rgba(197, 197, 197, 0.2);
+    }
+
+    .white4 {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(255, 255, 255);
+      right: 140px;
+      bottom: 140px;
+      box-shadow: 1px 1px 8px 10px rgba(197, 197, 197, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="white1"></div>
+    <div class="white2"></div>
+    <div class="white3"></div>
+    <div class="white4"></div>
+    <div class="red"></div>
+    <div class="red2"></div>
+    <div class="red3"></div>
+    <div class="red4"></div>
+  </div>
+
+</body>
+
+</html>
