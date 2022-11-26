@@ -17,7 +17,7 @@ input {
     border: 2px solid rgb(43, 138, 240);
     padding: 0 0 0 40px;
     border-radius: 20px;
-    background-image: url(/day02/iconok.png);
+    background-image: url(iconok.png);
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: 5px 3px;
