@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sodgerel</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .menu {
+      position: absolute;
+      background-color: black;
+      width: 350px;
+      height: 100vh;
+      padding-top: 20px;
+      left: -250px;
+      transition-duration: 0.5s;
+    }
+
+    .menu:hover {
+      left: 0;
+    }
+
+    .btn {
+      height: 70px;
+      background-color: rgb(35, 131, 107);
+      transition-duration: 0.5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: white;
+    }
+
+    .btn:hover p {
+      font-size: 25px;
+      color: black;
+    }
+
+    p {
+      font-size: 20px;
+      transition-duration: 0.2s;
+    }
+
+    .close {
+      width: 30px;
+      margin-left: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu">
+    <div class="close">
+      <img src="close-button.svg" alt="">
+    </div>
+
+    <div class="btn">
+      <p>УЛС ТӨР</p>
+    </div>
+    <div class="btn">
+      <p>НИЙГЭМ</p>
+    </div>
+    <div class="btn">
+      <p>СПОРТ</p>
+    </div>
+  </div>
+</body>
+
+</html>
