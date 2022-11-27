@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sodgerel</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .container {
+      background-color: black;
+      margin: 0 auto;
+      width: 600px;
+      height: 600px;
+      padding-top: 20px;
+      transition-duration: 0.5s;
+    }
+
+    .frame {
+      position: relative;
+      width: 190px;
+      height: 190px;
+      background-color: rgb(35, 131, 107);
+      background-image: url(ani1.jpg);
+      background-size: cover;
+      filter: grayscale();
+      transition: grayscale 1s;
+      /* transform: grayscale(-100px -100px); */
+    }
+
+    .frame:hover {
+      filter: none;
+      /* transform: grayscale(-100px -100px); */
+    }
+
+    .frame2 {
+      position: absolute;
+      top: 100px;
+      width: 190px;
+      height: 190px;
+      filter: none;
+      transform: translate(100px 100px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="frame"></div>
+    <div class="frame2"></div>
+
+  </div>
+</body>
+
+</html>
