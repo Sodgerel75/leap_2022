@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sodoo</title>
+  <link rel="stylesheet" href="style.css">
+  <style media="(max-width: 640px)">
+    .container-pic {
+      width: 32%;
+    }
+
+    .content {
+      flex-direction: column;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-content2 {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .main-content img {
+      width: 100%;
+    }
+
+    .main-content2 img {
+      width: 100%;
+    }
+  </style>
+  <style media="(min-width: 640px)">
+    .main-content {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .content {
+      flex-direction: column;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="content">
+    <div class="main-content">
+      <img src="img/photo-1523800503107-5bc3ba2a6f81.avif" alt="">
+      <div class="text">
+        <h2>Learn to Code</h2>
+        <h6>OPENING A DOOR TO THE FUTURE</h6>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, cum soluta quia error fugiat hic accusamus
+          et ipsa quas eos.</p>
+        <div class="link"><a href="#">Read More</a></div>
+      </div>
+    </div>
+    <div class="main-content2">
+      <div class="text">
+        <h2>Mastering the Language</h2>
+        <h6>JAVA IS NOT SAME AS JAVASCRIPT</h6>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aliquid ipsa ut sunt nihil
+          dolore.</p>
+        <div class="link"><a href="#">Read More</a></div>
+      </div>
+      <img src="img/photo-1575089976121-8ed7b2a54265.jpg" alt="">
+    </div>
+  </div>
+</body>
+
+</html>
