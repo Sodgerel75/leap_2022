@@ -19,6 +19,7 @@ body {
     margin-top: 60px;
     padding-top: 20px;
     padding-bottom: 20px;
+    padding: 40px;
 }
 
 .container2 {
@@ -57,14 +58,14 @@ img {
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(74, 80, 240);
     color: rgb(74, 80, 240);
-    width: 40%;
+    width: 30%;
     height: 50px;
     border-radius: 5px;
 }
 
 .col-text {
     width: 50%;
-    padding: 10px;
+    padding: 40px;
 }
 
 h1 {
@@ -79,5 +80,53 @@ button {
     width: 40%;
     height: 50px;
     border: none;
+    border-radius: 5px;
+}
+
+
+header {
+    background-color: rgb(207, 207, 207);
+}
+
+
+.header-inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+header ul li.bars {
+    width: 20px;
+    display: none;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header ul li a {
+    color: gray;
+    text-decoration: none;
+    display: block;
+}
+
+header ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+}
+
+header ul li a.dash {
+    color: gray;
+    border: 1px solid gray;
+    padding: 5px;
     border-radius: 5px;
 }

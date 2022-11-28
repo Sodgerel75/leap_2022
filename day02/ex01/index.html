@@ -23,10 +23,52 @@
         .logos {
             width: 100%;
         }
+
+        button {
+            width: 100%;
+        }
+
+        .you button {
+            width: 100%;
+        }
+
+
+
+
+        header ul li {
+            display: none;
+        }
+
+        header ul li.bars {
+            display: block;
+        }
     </style>
 </head>
 
 <body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <div>
+                    <a href="#" class="logo">
+                        <img src="logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li class="bars"><a href="#"><img src="bars.svg" alt="bars"></a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li>
+                            <div><a href="#" class="dash">Your Dashboard</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <div class="container">
         <div class="col-img">
             <img src="pic1.png" alt="">
