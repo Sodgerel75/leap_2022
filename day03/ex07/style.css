@@ -44,5 +44,14 @@ header {
 
 .text {
     color: white;
+}
 
+h1 {
+    font-size: 72px;
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0;
+    font-size: 32px;
 }
