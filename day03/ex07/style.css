@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+.web {
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.container-all {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container-pic {
+    width: 25%;
+    overflow: hidden;
+
+
+}
+
+.container-pic img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
