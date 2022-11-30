@@ -113,33 +113,33 @@
 // }
 
 
-const yearOfBirth = prompt("Tursun onoo oruul");
-let old = (2022 - yearOfBirth);
+// const yearOfBirth = prompt("Tursun onoo oruul");
+// let old = (2022 - yearOfBirth);
 
-console.log(old);
+// console.log(old);
 
-if (0 <= old && old <= 1) {
-  console.log("Infant")
-}
-else if (1 < old && old <= 3) {
-  console.log("Toddler")
-}
-else if (3 < old && old <= 5) {
-  console.log("Preschool")
-}
-else if (5 < old && old <= 12) {
-  console.log("Gradeschooler")
-}
-else if (12 < old && old <= 18) {
-  console.log("Teen")
-}
-else if (18 < old && old <= 21) {
-  console.log("Young adult")
-}
-else {
-  console.log("Adult")
-  alert("Насанд хүрсэн хүн")
-}
+// if (0 <= old && old <= 1) {
+//   console.log("Infant")
+// }
+// else if (1 < old && old <= 3) {
+//   console.log("Toddler")
+// }
+// else if (3 < old && old <= 5) {
+//   console.log("Preschool")
+// }
+// else if (5 < old && old <= 12) {
+//   console.log("Gradeschooler")
+// }
+// else if (12 < old && old <= 18) {
+//   console.log("Teen")
+// }
+// else if (18 < old && old <= 21) {
+//   console.log("Young adult")
+// }
+// else {
+//   console.log("Adult")
+//   alert("Насанд хүрсэн хүн")
+// }
 
 
 
@@ -170,26 +170,26 @@ else {
 
 
 
-// let weight = prompt("Jingee oruul");
-// let height = prompt("Unduruu oruul");
-// let bmi = weight / height * height;
-// console.log("BMI rate = " + bmi);
+let weight = prompt("Jingee oruul");
+let height = prompt("Unduruu oruul");
+let bmi = weight / height * height;
+console.log("BMI rate = " + bmi);
 
-// if (bmi < 18.5) {
-//     console.log("Under Weight")
-// }
-// else if (18.5 < bmi < 24.9) {
-//     console.log("Normal")
-// }
-// else if (25 < bmi < 29.9) {
-//     console.log("Over Weight")
-// }
-// else if (30 < bmi < 34.9) {
-//     console.log("Obesity (Class I)")
-// }
-// else {
-//     console.log("Extreme Obesity")
-// }
+if (bmi < 18.5) {
+  console.log("Under Weight")
+}
+else if (18.5 < bmi < 24.9) {
+  console.log("Normal")
+}
+else if (25 < bmi < 29.9) {
+  console.log("Over Weight")
+}
+else if (30 < bmi < 34.9) {
+  console.log("Obesity (Class I)")
+}
+else {
+  console.log("Extreme Obesity")
+}
 
 
 

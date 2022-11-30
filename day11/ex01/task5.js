@@ -1,7 +1,7 @@
 let weight = prompt("Jingee oruul");
 let height = prompt("Unduruu oruul");
-let bmi = weight / height * height;
-console.log("BMI = " + bmi);
+let bmi = weight / (height * height);
+console.log("BMI rate = " + bmi);
 
 if (bmi < 18.5) {
   console.log("Under Weight")
