@@ -112,12 +112,10 @@ let count = 0;
 let sum = 0;
 
 while (count <= maxNum) {
-    // console.log(count);
+
     sum = sum + count;
     console.log(count);
     count = count + 1;
-
-
 }
 
 console.log(sum);
