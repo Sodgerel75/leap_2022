@@ -5,7 +5,7 @@ let sum = 0;
 while (count <= maxNum) {
 
     sum = sum + count;
-    console.log(count);
+    // console.log(count);
     count = count + 1;
 }
 

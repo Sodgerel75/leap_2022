@@ -47,19 +47,55 @@
 //     }
 // }
 
-let max = 20;
+// let max = 20;
 
-for (let i = 1; i <= max; i++) {
-    if (i % 2 != 0) {
-        console.log(i);
-    }
-}
-
-
+// for (let i = 1; i <= max; i++) {
+//     if (i % 2 != 0) {
+//         console.log(i);
+//     }
+// }
 
 
-let str = 'life is beautiful';
 
-for (let i = 0; i < str.length; i++) {
-    console.log(str.charAt(i));
+
+// let str = 'life is beautiful';
+
+// for (let i = 0; i < str.length; i++) {
+//     console.log(str.charAt(i));
+// }
+
+
+// ----------Square n - д prompt  ашиглан утга оруулахад n*n харьцаатай дөрвөлжин хэвлэх.
+
+
+// let n = Number(prompt('Toogoo oruulna uu'));
+// console.log('Oruulsan too = ' + n);
+// console.log('Square = ' + n + 'x' + n);
+// let i = 2;
+// let od = '* ';
+
+// console.log(od.repeat(n));
+// console.log('');
+// while (i < n) {
+//     console.log(od + '  '.repeat(n - 2) + od);
+//     console.log('');
+//     i++;
+// }
+// console.log(od.repeat(n));
+
+
+
+// ------------- while loop ашиглан пирамид хийх.-------------------------
+
+
+let n = Number(prompt('Toogoo oruulna uu'));
+console.log('Oruulsan too = ' + n);
+
+let i = 1;
+let od = '* ';
+
+// console.log(' '.repeat(n - 8) + 'HAPPY NEW YEAR')
+while (i <= n) {
+    console.log(' '.repeat(n - i) + od.repeat(i));
+    i++;
 }
