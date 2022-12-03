@@ -1,14 +1,14 @@
-console.log('Find out even numbers from 1-10')
+// console.log('Find out even numbers from 1-10')
 
-const max = 10;
-let count = 1;
+// const max = 10;
+// let count = 1;
 
-while (count <= 10) {
-    if (count % 2 == 0) {
-        console.log(count);
-    }
-    count = count + 1;
-}
+// while (count <= 10) {
+//     if (count % 2 == 0) {
+//         console.log(count);
+//     }
+//     count = count + 1;
+// }
 
 
 // console.log('\n\nFind out all the odd numbers from 1 to 20')
@@ -96,14 +96,14 @@ while (count <= 10) {
 // ------------- while loop ашиглан пирамид хийх.-------------------------
 
 
-// let n = Number(prompt('Toogoo oruulna uu'));
-// console.log('Oruulsan too = ' + n);
+let n = Number(prompt('Toogoo oruulna uu'));
+console.log('Oruulsan too = ' + n);
 
-// let i = 1;
-// let od = '* ';
+let i = 1;
+let od = '* ';
 
-// // console.log(' '.repeat(n - 8) + 'HAPPY NEW YEAR')
-// while (i <= n) {
-//     console.log(' '.repeat(n - i) + od.repeat(i));
-//     i++;
-// }
+// console.log(' '.repeat(n - 8) + 'HAPPY NEW YEAR')
+while (i <= n) {
+    console.log(' '.repeat(n - i) + od.repeat(i));
+    i++;
+}
