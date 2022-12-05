@@ -9,7 +9,21 @@ for (let i = 2; i <= m; i++) {
     }
 }
 if (isPrime) {
-    console.log(n + ' - Prime number');
+    console.log(n + ' - Prime number' + ` 🟩 🟩 🟩 `);
 } else {
-    console.log(n + ' - Is not prime number');
+    console.log(n + ' - Is not prime number' + ' 🟥 🟥 🟥');
 }
+
+
+
+
+
+
+
+
+
+
+// console.log(`${eko} ni 🟩 🟩 🟩 `);
+
+// console.log(`${eko} ni 🟥 🟥 🟥 `);
+
