@@ -5,14 +5,15 @@
 
 
 
-let arrays = [1, 2, 5, 3, 5, 6, 7, 8];
-console.log(arrays);
-console.log(arrays.length);
+let itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon',];
+console.log(itCompanies);
+console.log(itCompanies.length);
+console.log(itCompanies[0]);
 
-for (let i = 0; i < arrays.length; i++) {
-  console.log(arrays[i] + 1);
-  arrays[i] = arrays[i] + 10;
+for (let i = 0; i < itCompanies.length; i++) {
+  console.log(itCompanies[i] + ' Good');
+  itCompanies[i] = itCompanies[i].toUpperCase();
 }
-console.log(arrays)
+console.log(itCompanies)
 
 
