@@ -27,7 +27,7 @@
 // f2(3, 3);
 
 
-// // 3. 
+// // 3.
 
 // function E(m, c) {
 //     console.log(m * (Math.pow(c, 2)));
@@ -60,7 +60,7 @@
 // f5(2, 2);
 
 
-// // 6. 
+// // 6.
 
 // function f6(x) {
 //     console.log(Math.pow(x, 3) + Math.pow(x, 2) + 5 * x + 12);
@@ -148,22 +148,35 @@
 // 1. Өгөгдсөн 2 тооны ихийг олох функц бич.
 
 
-let num1 = Number(prompt('Gime me first number'));
-let num2 = Number(prompt('Gime me second number'));
+// let num1 = Number(prompt('Gime me first number'));
+// let num2 = Number(prompt('Gime me second number'));
 
-// if (x < y) {
-//     console.log(y + ' is bigger than ' + x);
-// } else {
-//     console.log(x + ' is bigger than ' + y);
+// // if (x < y) {
+// //     console.log(y + ' is bigger than ' + x);
+// // } else {
+// //     console.log(x + ' is bigger than ' + y);
+// // }
+
+
+// function findMax(x, y) {
+//     if (x < y) {
+//         console.log(y + ' is bigger than ' + x);
+//     } else {
+//         console.log(x + ' is bigger than ' + y);
+//     }
 // }
 
+// findMax(num1, num2);
 
-function findMax(x, y) {
-    if (x < y) {
-        console.log(y + ' is bigger than ' + x);
-    } else {
-        console.log(x + ' is bigger than ' + y);
-    }
-}
 
-findMax(num1, num2);
+
+
+
+
+// let arr = [4, 32, 2, 5, 8, -10, 20, 1, 0, -20];
+
+// function sortDigit() {
+//     arr.arraySorter
+
+// }
+// console.log(arr);
