@@ -1,36 +1,10 @@
-// Gime number of arrays = 1, 2, 3, 4, 5, 6, 7, 8
-//      Output new array = 2, 3, 6, 4, 6, ,7 ,8 ,8
-// Array item value change
-// use of FOR LOOP
-
-
-
 let itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon',];
 console.log(itCompanies);
-console.log(itCompanies.slice(3));
-console.log(itCompanies.slice(4, 7));
+console.log(itCompanies.slice(0, 3));
+console.log(itCompanies.slice(itCompanies.length - 3, itCompanies.length));
 console.log(itCompanies[Math.floor(itCompanies.length / 2)]);
 
-
-
-
-
-
-
-
-
-
-
-// console.log('Компаниудын length: ' + itCompanies.length);
-// console.log('Эхний ком - ' + itCompanies[0] + ', Дунд ком - ' + itCompanies[Math.floor(itCompanies.length / 2)] + ', Сүүлийн ком - ' + itCompanies[itCompanies.length - 1]);
-
-// for (let i = 0; i < itCompanies.length; i++) {
-//   console.log('Компани - ' + itCompanies[i]);
-//   itCompanies[i] = itCompanies[i].toUpperCase();
-// }
-// console.log(itCompanies)
-
-// console.log(itCompanies.toString() + ' зэрэг мэдээллийн технологийн томоохон компаниуд.');
-
-
-
+let removedCom = itCompanies.splice(0, 1);
+console.log(itCompanies);
+let poppedCom = itCompanies.pop();
+console.log(itCompanies);
