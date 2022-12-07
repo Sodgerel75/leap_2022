@@ -24,10 +24,20 @@ for (let i = 0; i < arrayOfNumbers.length; i++) {
     min = arrayOfNumbers[i]
   }
 }
-console.log(max);
+console.log('Хамгийн их тоо = ' + max);
 
 
 //  4. Хамгийн бага тоог ол.
 
-console.log(min);
+console.log('Хамгийн бага тоо = ' + min);
 
+//  Array - ийн эхэнд дурын 1 тоог нэм.
+
+console.log(arrayOfNumbers.unshift(999));
+console.log(arrayOfNumbers);
+
+
+//  6. Array - ийн төгсгөлд дурын 1 тоог нэм.
+
+arrayOfNumbers.splice(arrayOfNumbers.length, 0, 888)
+console.log(arrayOfNumbers);
