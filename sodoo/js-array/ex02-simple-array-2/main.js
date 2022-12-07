@@ -7,16 +7,30 @@
 
 let itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon',];
 console.log(itCompanies);
-console.log('Компаниудын length: ' + itCompanies.length);
-console.log('Эхний ком - ' + itCompanies[0] + ', Дунд ком - ' + itCompanies[Math.floor(itCompanies.length / 2)] + ', Сүүлийн ком - ' + itCompanies[itCompanies.length - 1]);
+console.log(itCompanies.slice(3));
+console.log(itCompanies.slice(4, 7));
+console.log(itCompanies[Math.floor(itCompanies.length / 2)]);
 
-for (let i = 0; i < itCompanies.length; i++) {
-  console.log('Компани - ' + itCompanies[i]);
-  itCompanies[i] = itCompanies[i].toUpperCase();
-}
-console.log(itCompanies)
 
-console.log(itCompanies + ' зэрэг мэдээллийн технологийн томоохон компаниуд.');
+
+
+
+
+
+
+
+
+
+// console.log('Компаниудын length: ' + itCompanies.length);
+// console.log('Эхний ком - ' + itCompanies[0] + ', Дунд ком - ' + itCompanies[Math.floor(itCompanies.length / 2)] + ', Сүүлийн ком - ' + itCompanies[itCompanies.length - 1]);
+
+// for (let i = 0; i < itCompanies.length; i++) {
+//   console.log('Компани - ' + itCompanies[i]);
+//   itCompanies[i] = itCompanies[i].toUpperCase();
+// }
+// console.log(itCompanies)
+
+// console.log(itCompanies.toString() + ' зэрэг мэдээллийн технологийн томоохон компаниуд.');
 
 
 

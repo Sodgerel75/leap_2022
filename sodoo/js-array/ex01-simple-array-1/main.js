@@ -16,7 +16,7 @@ for (let i = 0; i < itCompanies.length; i++) {
 }
 console.log(itCompanies)
 
-console.log(itCompanies + ' зэрэг мэдээллийн технологийн томоохон компаниуд.');
+console.log(itCompanies.toString() + ' зэрэг мэдээллийн технологийн томоохон компаниуд.');
 
 
 
