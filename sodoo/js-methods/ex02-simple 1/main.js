@@ -49,7 +49,7 @@ console.log('Remove the first IT company from the array ');
 array.shift();
 console.log(array);
 
-// Remove the last IT company from the array
+console.log('Remove the last IT company from the array');
 array.pop();
 console.log(array);
 
