@@ -25,9 +25,23 @@ let students = [
         gender: "female"
     },
 ]
-console.log(students);
+// console.log(students);
 
 
+
+// findSameAge function V1 (array)
+
+function findSameAge(array) {
+    let sameAge = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].age == array[i].age) {
+            sameAge.push(array[i].name);
+        }
+    }
+    return sameAge;
+}
+
+console.log('Ижилхэн настай - ' + findSameAge(students).join(', '));
 
 
 
