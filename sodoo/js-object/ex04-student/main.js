@@ -35,3 +35,20 @@ function findOlderStudents(array) {
 
 
 findOlderStudents(students);  //Khangai, Sodoo
+
+
+
+function findOlderStudents(array) {
+    for (let i = 0; i < array.length; i++) {
+        let age = 2022 - array[i].birthOfDay;
+        if (age > 20) {
+            console.log(array[i].name + ' нас ' + age)
+        }
+        if (array[i].single) {
+            console.log('Ганц бие - ' + array[i].name)
+        }
+    }
+}
+
+
+findOlderStudents(students);  //Khangai, Sodoo
