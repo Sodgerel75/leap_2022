@@ -1,13 +1,8 @@
-// let tooA = Number(prompt('Ehnii toogoo oruul'));
-// let tooB = Number(prompt('Daraagiin toogoo oruul'));
+console.log('100 хүртэл санамсаргүй тоо = ' + Math.round(Math.random() * 100));
 
-// let max = Math.max(tooA, tooB);
-// let min = Math.min(tooA, tooB);
-// console.log('Max too = ' + max);
-// console.log('Min too = ' + min);
+let min = 50;
+let max = 255;
+console.log('Min too = ' + min);
+console.log('Max too = ' + max);
 
-
-
-
-console.log('Random too = ' + Math.round(Math.random() * 100);
-// console.log('Random too = ' + Math.round(Math.random() * (max - min) + min));
+console.log('Random too = ' + Math.round(Math.random() * (max - min) + min));
