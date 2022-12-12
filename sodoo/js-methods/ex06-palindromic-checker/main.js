@@ -1,13 +1,13 @@
 
 let n = toArrConverter(prompt("Ta hussen toogoo oruulna uu"));
-// n.reverse();
+n.reverse();
 console.log(n);
 
-// if (n === n.reverse()) {
-//   console.log(n + ' is palindromic');
-// } else {
-//   console.log(n + ' is not palindromic');
-// }
+if (n === n.reverse()) {
+  console.log(n + ' is palindromic');
+} else {
+  console.log(n + ' is not palindromic');
+}
 
 
 

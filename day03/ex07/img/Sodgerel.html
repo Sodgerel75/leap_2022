@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://127.0.0.1:5501/sodoo/js-dom/Lesson/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sodgerel</title>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+      margin-left: 20px;
+    }
+
+    a {
+      background-color: rgb(7, 241, 124);
+      border-radius: 5px;
+      text-decoration: none;
+      margin-left: 20px;
+      padding: 10px 20px;
+      color: rgb(61, 61, 61);
+    }
+
+    a:hover {
+      background-color: rgb(146, 236, 42);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Please check console</h1>
+  <h1>JS-DOM</h1>
+  <br><br>
+  <div id="helloText">Hello WORLD!</div>
+  <!-- <a href="main.js">JavaScript file үзэх</a> -->
+
+  <div class="dummy">HELLO DUMMY</div>
+  <h1 class="dummy">HELLO DUMMY</h1>
+  <ul id="“aimagNames&quot;">
+
+    <li id="aimag-101">Архангай</li>
+
+    <li id="aimag-202">Баян-Өлгий</li>
+
+    <li id="aimag-103">Баянхонгор</li>
+
+    <li id="aimag-104">Булган</li>
+
+    <li id="aimag-205">Говь-Алтай</li>
+
+    <li id="aimag-406">Говьсүмбэр</li>
+
+    <li id="aimag-407">Дархан-Уул</li>
+
+    <li id="aimag-408">Дорноговь</li>
+
+    <li id="aimag-309">Дорнод</li>
+
+    <li id="aimag-410">Дундговь</li>
+
+    <li id="aimag-211">Завхан</li>
+
+    <li id="aimag-112">Орхон</li>
+
+    <li id="aimag-113">Өвөрхангай</li>
+
+    <li id="aimag-414">Өмнөговь</li>
+
+    <li id="aimag-315">Сүхбаатар</li>
+
+    <li id="aimag-416">Сэлэнгэ</li>
+
+    <li id="aimag-417">Төв</li>
+
+    <li id="aimag-218">Увс</li>
+
+    <li id="aimag-219">Ховд</li>
+
+    <li id="aimag-120">Хөвсгөл</li>
+
+    <li id="aimag-321">Хэнтий</li>
+
+    <li id="aimag-522">Улаанбаатар</li>
+
+  </ul>
+  <script src="./Sodgerel_files/main.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

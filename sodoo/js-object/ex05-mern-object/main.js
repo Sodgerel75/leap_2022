@@ -58,11 +58,30 @@ const users = [
 ]
 
 
+function printUser(array, too) {
+    let userOb = array[too];
+    return userOb;
+}
+
+console.log(printUser(users, 2));
 
 
 
 
 
+
+
+function findLogin50(array) {
+    let tempUsers = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].points >= 50 && array[i].isLoggedIn == true) {
+            tempUsers.push(array[i].name);
+        }
+    }
+    return tempUsers;
+}
+
+console.log('50-аас дээш оноо авсан  - ' + findLogin50(users).join(', '));
 
 
 
