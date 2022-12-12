@@ -78,6 +78,33 @@ console.log(OvogAdd(students));
 
 
 
+// 4. Ижилхэн настай сурагчдыг олж шинэ array дотор хийх  
+console.log("\n4. Ижилхэн настай сурагчдыг олж шинэ array дотор хийх  ");
+findSameAgedStudents(students);
+
+
+function findSameAgedStudents(array) {
+    let sameAgedStudent = [];
+    for (let i = 0; i < array.length; i++) {
+        for (let j = i + 1; j < array.length; j++) {
+            if (array[i].age == array[j].age) {
+                a = array[i];
+                b = array[j];
+                console.log(a.name + ' нас = ' + b.name + ' нас');
+            }
+        }
+        if (!sameAgedStudent.includes(a)) {
+            sameAgedStudent.push(a)
+        }
+        if (!sameAgedStudent.includes(b)) {
+            sameAgedStudent.push(b)
+        }
+    }
+    console.log(sameAgedStudent);
+}
+
+
+
 
 
 // const findUnique = new Set((array).map(x => {
