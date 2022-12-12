@@ -67,7 +67,8 @@ console.log('Сурагчдын дундаж нас = ' + findAverageAge(student
 
 function OvogAdd(array) {
     for (let i = 0; i < array.length; i++) {
-        array[i].ovog = 'Боржигон';
+        // array[i].ovog = 'Боржигон';
+        array[i].lastname = prompt(`${array[i].name} сурагчийн овог оруулна уу`);
     }
     return array;
 }

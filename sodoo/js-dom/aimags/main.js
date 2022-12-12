@@ -38,11 +38,11 @@ let styleUngu = 'font-size: 30px; color: orange; border: 1px solid green; backgr
 
 for (let i = 0; i < document.getElementById('aimagNames').getElementsByTagName("li").length; i++) {
     if (document.getElementById("aimagNames").getElementsByTagName('li')[i].id.includes('aimag-1')) {
-        document.getElementById("aimagNames").getElementsByTagName("li")[i].style = 'font-size: 30px; color: yellow;'
+        document.getElementById("aimagNames").getElementsByTagName("li")[i].style = 'font-size: 30px; color: yellow; background-color: orange;'
     }
 
     if (document.getElementById("aimagNames").getElementsByTagName('li')[i].id.includes('aimag-2')) {
-        document.getElementById("aimagNames").getElementsByTagName("li")[i].style = 'font-size: 30px; color: pink;'
+        document.getElementById("aimagNames").getElementsByTagName("li")[i].style = 'font-size: 30px; color: pink; background-color: green;'
     }
 
     if (document.getElementById("aimagNames").getElementsByTagName('li')[i].id.includes('aimag-3')) {
@@ -58,3 +58,33 @@ for (let i = 0; i < document.getElementById('aimagNames').getElementsByTagName("
 
 
 console.log(document.getElementById("aimagNames").getElementsByTagName("li")[0].id.includes('aimag-1').style = 'font-size: 30px; color: green;');
+
+
+
+console.log(document.querySelector('#aimagNames'));
+
+console.log(document.querySelector('.khangai'));
+console.log(document.getElementsByClassName("khangai"));
+console.log(document.querySelectorAll('.khangai'));
+
+
+document.querySelector('#demo').innerHTML = "Date : " + Date();
+
+
+document.querySelector('img').src = 'img/download.jpeg';
+document.querySelector('img').style = 'border: 2px solid red; border-radius: 20px';
+console.log(document.querySelector('img').src = 'img/download.jpeg');
+
+
+
+const newDiv = document.createElement("h2");
+const newContent = document.createTextNode("Манай сайтад тавтай морил");
+newDiv.appendChild(newContent);
+const main = document.getElementsByTagName("body");
+const h1 = document.querySelector('h1');
+h1.appendChild(newDiv)
+// main[0].appendChild(newDiv);
+
+
+
+
