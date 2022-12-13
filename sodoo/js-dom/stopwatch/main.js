@@ -8,7 +8,7 @@ function startInterval() {
     let now = new Date();
     let myTimer = document.getElementById('myTimer');
     // myTimer.innerHTML = now;
-    myTimer.innerHTML = now.getHours() + '-' + now.getMinutes() + '-' + now.getSeconds() + '-' + now.getMilliseconds();
+    myTimer.innerHTML = now.getHours() + ' : ' + now.getMinutes() + ' : ' + now.getSeconds() + ' : ' + now.getMilliseconds();
 
 }
 
