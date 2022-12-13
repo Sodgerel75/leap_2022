@@ -8,11 +8,16 @@
   <title>Sodgerel</title>
   <style>
     * {
+      box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    h1 {
-      margin-left: 20px;
+    .container {
+      width: 500px;
+      height: 50vh;
+      margin: 0 auto;
+      background-color: aquamarine;
+      text-align: center;
     }
 
     a {
@@ -27,24 +32,22 @@
     a:hover {
       background-color: rgb(146, 236, 42);
     }
+
+    p {
+      color: orange;
+      font-size: 70px;
+    }
   </style>
 </head>
 
 <body id="bodyCol">
-  <h1>BOM</h1>
-  <a href="#" target="_blank">Click me</a>
-  <br>
-  <p>JavaScript setTimeout Demo</p>
-  <button id="alertButton">Show</button>
-  <button id="cancelButton">Cancel</button>
-  <!-- <button onclick="showAlert();">Show</button>
-  <button onclick="cancelAlert();">Cancel</button> -->
-  <p id="myTimer"></p>
-
-  <button id="starter">Start Timer</button>
-  <button id="colorChanger">Random Color Generator</button>
-  <a href="main.js">JavaScript file үзэх</a>
-  <script src="main.js"></script>
+  <div class="container">
+    <button id="starter">Start Timer</button>
+    <p id="myTimer"></p>
+    <button id="colorChanger">Random Color Generator</button>
+    <a href="main.js">JavaScript file үзэх</a>
+    <script src="main.js"></script>
+  </div>
 </body>
 
 </html>
