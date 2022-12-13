@@ -1,29 +1,16 @@
-
-
-
-
 function randomRgbColor() {
-    let r = Math.floor(Math.random() * 255) + 1;;
-    let g = Math.floor(Math.random() * 255) + 1;;
-    let b = Math.floor(Math.random() * 255) + 1;;
+    let r = Math.floor(Math.random() * 255);
+    let g = Math.floor(Math.random() * 255);
+    let b = Math.floor(Math.random() * 255);
     return [r, g, b];
 }
-let colorCode = randomRgbColor().toString()
-console.log(colorCode)
-
-
-
-
-
-
-let colorButton = document.getElementById('colorChanger');
 
 function randomColor() {
-    randomRgbColor();
-    document.getElementById('bodyCol').style = `background-color: rgb(${colorCode})`;
+    document.getElementById('bodyCol').style = `background-color: rgb(${randomRgbColor().toString()})`;
 
 }
 
+let colorButton = document.getElementById('colorChanger');
 colorButton.addEventListener('click', randomColor);
 
 
