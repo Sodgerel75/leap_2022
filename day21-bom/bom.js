@@ -78,3 +78,4 @@ function randomColor() {
 }
 
 colorButton.addEventListener('click', randomColor);
+
