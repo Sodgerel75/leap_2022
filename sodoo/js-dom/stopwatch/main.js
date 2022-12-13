@@ -1,157 +1,81 @@
-let students = [
-    {
-        name: 'Сэд-Эрдэнэ',
-        age: 19,
-        gender: "male"
-    },
-    {
-        name: 'Индра',
-        age: 19,
-        gender: "female"
-    },
-    {
-        name: 'Хатнаа ',
-        age: 21,
-        gender: "male"
-    },
-    {
-        name: 'Тэмүүлэн',
-        age: 23,
-        gender: "male"
-    },
-    {
-        name: 'Намуун',
-        age: 23,
-        gender: "female"
-    },
-]
-// console.log(students);
+console.log('----- BOM ------');
+// console.log(window);
+// // window.alert('hello');
 
 
-function findGender(array) {
-    let maleStudents = 0;
-    let femaleStudents = 0;
+// window.open('https://google.com', 'hello');
 
-    for (let i = 0; i < array.length; i++) {
-        if (array[i].gender == 'male') {
-            maleStudents = maleStudents + 1;
-        } else {
-            femaleStudents = femaleStudents + 1;
-        }
-    }
-    let genderSort = { male: maleStudents, female: femaleStudents };
-    return genderSort
+// window.confirm('Hello');
+
+// let result = window.confirm('Do you wanna to Quit?')
+// console.log(result);
+
+// let message = result ? 'Та ОК товчийг дарлаа' :
+//     'Та Cancel товчийг дарсан';
+// alert(message);
+
+
+let alertButton = document.getElementById('alertButton');
+let cancelButton = document.getElementById('cancelButton');
+let timeoutID;
+function showAlert() {
+    timeoutID = setTimeout(alert, 3000, 'setTimeout Demo!');
 }
-// console.log(students);
-console.log(findGender(students));
-
-
-
-
-
-
-function findAverageAge(array) {
-    let ages = 0;
-    for (let i = 0; i < array.length; i++) {
-        ages = ages + array[i].age;
-    }
-    // console.log(array.length);
-    // console.log(ages / array.length);
-    return ages / array.length;
-}
-
-console.log('Сурагчдын дундаж нас = ' + findAverageAge(students));
-
-
-
-
-function OvogAdd(array) {
-    for (let i = 0; i < array.length; i++) {
-        array[i].ovog = 'Боржигон';
-        // array[i].lastname = prompt(`${array[i].name} сурагчийн овог оруулна уу`);
-    }
-    return array;
-}
-console.log(OvogAdd(students));
-
-
-
-
-
-// 4. Ижилхэн настай сурагчдыг олж шинэ array дотор хийх  
-console.log("\n4. Ижилхэн настай сурагчдыг олж шинэ array дотор хийх  ");
-findSameAgedStudents(students);
-
-
-function findSameAgedStudents(array) {
-    let sameAgedStudent = [];
-    for (let i = 0; i < array.length; i++) {
-        for (let j = i + 1; j < array.length; j++) {
-            if (array[i].age == array[j].age) {
-                a = array[i];
-                b = array[j];
-                console.log(a.name + ' нас = ' + b.name + ' нас');
-            }
-        }
-        if (!sameAgedStudent.includes(a)) {
-            sameAgedStudent.push(a)
-        }
-        if (!sameAgedStudent.includes(b)) {
-            sameAgedStudent.push(b)
-        }
-    }
-    console.log(sameAgedStudent);
+function clearAlert() {
+    clearTimeout(timeoutID);
 }
 
 
 
 
+alertButton.addEventListener('click', () => {
+    timeoutID = setTimeout(alert, 3000, 'setTimeout Demo!');
+});
 
-// const findUnique = new Set((array).map(x => {
-//     return x.age
-// }))
+cancelButton.addEventListener('click', () => {
+    console.log(timeoutID);
+    window.clear(timeoutID);
 
-// if (findUnique.size < (array).length) {
-//     console.log("duplicates found!")
-// } else {
-//     console.log("Done!")
-// }
+})
 
-// findUnique(students)
-
-
-// console.log((students[i].age) == (students[i].age));
-
-// console.log(students[0].age);
-// console.log(students[2].age);
-
-// function findSameAge(array) {
-//     let sameAge = [];
-//     for (let i = 0; i < array.length; i++) {
-//         if (array[i].age.some(array[i].age)) {
-//             sameAge.push(sortedArr[i].name)
-//         }
-//     }
-//     return sameAge;
-// }
-
-// console.log(findSameAge(students));
+console.log(timeoutID);
 
 
 
-// const findDuplicates = (arr) => {
-//     let sorted_arr = arr.slice().sort(); // You can define the comparing function here.
-//     // JS by default uses a crappy string compare.
-//     // (we use slice to clone the array so the
-//     // original array won't be modified)
-//     let results = [];
-//     for (let i = 0; i < sorted_arr.length - 1; i++) {
-//         if (sorted_arr[i + 1] == sorted_arr[i]) {
-//             results.push(sorted_arr[i]);
-//         }
-//     }
-//     return results;
-// }
+setTimeout(() => {
+    console.log('Time out is running');
+}, 5000)
 
-// let duplicatedArray = [9, 9, 111, 2, 3, 4, 4, 5, 7];
-// console.log(`The duplicates in ${duplicatedArray} are ${findDuplicates(duplicatedArray)}`);
+let counter = 0;
+
+// setInterval(startInterval, 1000);
+
+
+
+function runTimerInterval() {
+    window.setInterval(startInterval, 10);
+}
+
+
+function startInterval() {
+    let now = new Date();
+    let myTimer = document.getElementById('myTimer');
+    // myTimer.innerHTML = now;
+    myTimer.innerHTML = now.getHours() + ' ' + now.getMinutes() + ' ' + now.getSeconds() + ' ' + now.getMilliseconds();
+
+}
+
+let startButton = document.getElementById('starter');
+
+startButton.addEventListener('click', runTimerInterval);
+
+
+
+let colorButton = document.getElementById('colorChanger');
+
+function randomColor() {
+    document.getElementById('bodyCol').style = 'background-color: red';
+}
+
+colorButton.addEventListener('click', randomColor);
+
