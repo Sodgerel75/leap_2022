@@ -1,10 +1,10 @@
-console.log('aimag');
+
 
 console.log(document.getElementById("aimag-101").innerHTML);
 console.log(document.getElementById("aimag-522").innerHTML);
 console.log(document.getElementById("aimag-315").innerHTML);
 
-document.getElementById("aimag-315").innerHTML = "Bavaria";
+// document.getElementById("aimag-315").innerHTML = "Bavaria";
 
 document.getElementById("aimagNames").style = 'font-size: 20px; color: blue;'
 document.getElementById("aimag-315").style = 'font-size: 30px; color: red; padding: 20px; margin: 20px; border: 1px solid red; background-color: pink;'
