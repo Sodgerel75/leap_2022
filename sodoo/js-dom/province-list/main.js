@@ -1,51 +1,57 @@
-// console.log(document.getElementById("aimag-101").innerHTML);
-// console.log(document.getElementById("aimag-522").innerHTML);
-// console.log(document.getElementById("aimag-315").innerHTML);
+console.log('1. Хамгийн эхний li элементийг аван утгыг console.log дээр хэвлэх');
+console.log(document.querySelector('li').innerHTML);
 
-// // document.getElementById("aimag-315").innerHTML = "Bavaria";
+console.log('2. Хамгийн сүүлийн li элементийг аван утгыг console.log дээр хэвлэх');
+const liLenght = document.getElementById("aimagNames").getElementsByTagName("li").length;
+console.log(document.getElementById("aimagNames").getElementsByTagName('li')[liLenght - 1].innerHTML);
 
-// document.getElementById("aimagNames").style = 'font-size: 20px; color: blue;'
+console.log('3. Сүхбаатар аймгийг элементийн id-аар аван console.log дээр хэвлэх');
+console.log(document.getElementById("aimag-315").innerHTML);
+
+console.log('4. Тухайн жагсаалтын элементүүдэд загвар оруулах');
+document.getElementById("aimagNames").style = 'font-size: 30px; color: blue; padding: 5px 20px; border-radius: 5px; margin: 5px;'
+
+// https://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_nodelist_loop
+
+// document.getElementById("aimag-315").innerHTML = "Bavaria"; // test - aimag ner solih
+
 // document.getElementById("aimag-315").style = 'font-size: 30px; color: red; padding: 20px; margin: 20px; border: 1px solid red; background-color: pink;'
 
 // document.getElementsByClassName("khangai")[0].style = 'font-size: 30px; color: red; padding: 20px; margin: 20px; border: 1px solid red; background-color: pink;'
 
 // for (let i = 0; i < document.getElementsByClassName("khangai").length; i++) {
 //     document.getElementsByClassName("khangai")[i].style = 'font-size: 30px; color: green;';
-
 // }
 
 // for (let i = 0; i < document.getElementsByClassName("baruun").length; i++) {
 //     document.getElementsByClassName("baruun")[i].style = 'font-size: 30px; color: orange;';
-
 // }
 
 
-// console.log(document.getElementById("aimagNames").id);
-
-// const liLenght = document.getElementById("aimagNames").getElementsByTagName("li").length;
-// console.log(document.getElementById("aimagNames").getElementsByTagName('li')[liLenght - 1].innerHTML);
-
-// document.getElementsByTagName('span')[0].innerHTML = "MONGOL";
+// console.log(document.getElementById("aimagNames").id); // hold
 
 
 
-// console.log(document.getElementById("aimagNames").getElementsByTagName("li")[0].id.includes('aimag-1'));
+document.getElementsByTagName('span')[0].innerHTML = "MONGOL"; // span tag element oruulah
 
 
-let styleUngu = 'font-size: 30px; color: green; background-color: yellow; padding: 5px 20px; border-radius: 5px; margin: 5px;'
-let styleUngu2 = 'font-size: 30px; color: black; background-color: red; padding: 5px 20px; border-radius: 5px; margin: 5px;'
+console.log(document.getElementById("aimagNames").getElementsByTagName("li")[0].id.includes('aimag-1')); // test
+
+
+let styleUngu = 'background-color: yellow; padding: 5px 20px; border-radius: 5px; margin: 5px;'
+let styleUngu2 = 'background-color: red; padding: 5px 20px; border-radius: 5px; margin: 5px;'
 
 for (let i = 0; i < document.getElementById('aimagNames').getElementsByTagName("li").length; i++) {
     if (document.getElementById("aimagNames").getElementsByTagName('li')[i].id.includes('aimag-1')) {
-        document.getElementById("aimagNames").getElementsByTagName("li")[i].style = 'font-size: 30px; color: yellow; background-color: orange; padding: 5px 20px; border-radius: 5px; margin: 5px;'
+        document.getElementById("aimagNames").getElementsByTagName("li")[i].style = 'background-color: orange; padding: 5px 20px; border-radius: 5px; margin: 5px;'
     }
 
     if (document.getElementById("aimagNames").getElementsByTagName('li')[i].id.includes('aimag-2')) {
-        document.getElementById("aimagNames").getElementsByTagName("li")[i].style = 'font-size: 30px; color: pink; background-color: green; padding: 5px 20px; border-radius: 5px; margin: 5px;'
+        document.getElementById("aimagNames").getElementsByTagName("li")[i].style = 'background-color: green; padding: 5px 20px; border-radius: 5px; margin: 5px;'
     }
 
     if (document.getElementById("aimagNames").getElementsByTagName('li')[i].id.includes('aimag-3')) {
-        document.getElementById("aimagNames").getElementsByTagName("li")[i].style = 'font-size: 30px; color: green; background-color: cyan; padding: 5px 20px; border-radius: 5px; margin: 5px;'
+        document.getElementById("aimagNames").getElementsByTagName("li")[i].style = 'background-color: cyan; padding: 5px 20px; border-radius: 5px; margin: 5px;'
     }
 
     if (document.getElementById("aimagNames").getElementsByTagName('li')[i].id.includes('aimag-4')) {
@@ -57,9 +63,10 @@ for (let i = 0; i < document.getElementById('aimagNames').getElementsByTagName("
 }
 
 
-console.log(document.getElementById("aimagNames").getElementsByTagName("li")[0].id.includes('aimag-1').style = 'font-size: 30px; color: green;');
 
 
+
+// console.log(document.getElementById("aimagNames").getElementsByTagName("li")[0].id.includes('aimag-1').style = 'font-size: 30px; color: green;');
 
 // console.log(document.querySelector('#aimagNames'));
 
