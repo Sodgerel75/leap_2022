@@ -17,10 +17,11 @@ function addTask() {
     let p = document.createElement('div')
     p.id = toDoArr.length + 1
     p.style = ""
+    p.className = "input-group my-2"
 
     // p.innerHTML = task.value + ' <button>edit</button>' + ' <button>done</button>' + ' <button id="del-btn">del</button>';
     p.innerHTML = `
-    <input value=${task.value} disabled> 
+    <input value=${task.value} class="form-control" disabled> 
     <button id="edit-btn" onclick="editFunc(this)"  class="btn btn-warning"><i class="bi bi-pencil"></i></button> 
     <button onclick="doneFunc(this)" class="btn btn-success"><i class="bi bi-check-circle"></i></button>  
     <button id="del-btn-${toDoArr.length + 1} " onclick="delP(this)" class="btn btn-danger"><i class="bi bi-trash"></i></button>
