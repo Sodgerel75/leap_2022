@@ -9,7 +9,21 @@ console.log('3. Сүхбаатар аймгийг элементийн id-аар
 console.log(document.getElementById("aimag-315").innerHTML);
 
 console.log('4. Тухайн жагсаалтын элементүүдэд загвар оруулах');
-document.getElementById("aimagNames").style = 'font-size: 30px; color: blue; padding: 5px 20px; border-radius: 5px; margin: 5px;'
+// let myList = document.querySelectorAll('li');
+// document.getElementById("aimagNames").style = 'font-size: 30px; color: blue; padding: 5px 20px; border-radius: 5px; margin: 20px;'
+console.log(document.getElementById("aimagNames").getElementsByTagName('li'));
+
+
+let myList = document.getElementById("aimagNames").getElementsByTagName('li');
+
+function styler(array) {
+    for (let i = 0; i < array.length; i++) {
+        array[i].style = 'font-size: 30px; color: blue; padding: 5px 20px; border-radius: 5px; margin: 20px;'
+    }
+}
+console.log(styler(myList)[i]);
+
+
 
 // https://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_nodelist_loop
 
