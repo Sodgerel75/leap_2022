@@ -16,7 +16,7 @@ function addTask() {
     // document.getElementById('taskList').innerHTML = task.value + 'delete';
     let p = document.createElement('div')
     p.id = toDoArr.length + 1
-    p.style = "col-auto"
+    p.style = ""
 
     // p.innerHTML = task.value + ' <button>edit</button>' + ' <button>done</button>' + ' <button id="del-btn">del</button>';
     p.innerHTML = `
