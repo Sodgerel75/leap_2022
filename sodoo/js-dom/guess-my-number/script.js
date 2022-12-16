@@ -23,13 +23,11 @@ checkButton.addEventListener('click', guessNum);
 
 
 function guessNum() {
-  function resGame() {
-    const randomNumber = Math.floor(Math.random() * 20) + 1;
-    console.log('Random Number = ' + randomNumber);
-  }
-
-
   let inputNumber = document.getElementById('gInput');
+  if (randomNumber == inputNumber.value) {
+    document.getElementById('message').innerHTML = 'Зөв таалаа'
+    document.getElementsByTagName('body')[0].style = 'background-color: #60b347';
+  }
 
   if (randomNumber < inputNumber.value) {
     // alert('Таны оруулсан тоо RANDOM тооноос их байна');
@@ -40,6 +38,8 @@ function guessNum() {
     // alert('Таны оруулсан тоо RANDOM тооноос бага байна');
     document.getElementById('message').innerHTML = 'Бага байна'
   }
+
+
   //     i++;
   //  while (randomNumber != inputNumber.value)
   //   // alert('Баяр хүргэе!!! Та таалаа. \nRandom Number = ' + randomNumber);
