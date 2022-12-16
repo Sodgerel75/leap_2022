@@ -5,13 +5,13 @@ console.log('Random Number = ' + randomNumber);
 
 // ------------------ Restart Game -------------------------
 
-const restartButton = document.getElementById('restart');
-restartButton.addEventListener('click', resGame);
+// const restartButton = document.getElementById('restart');
+// restartButton.addEventListener('click', resGame);
 
-function resGame() {
-  const randomNumber = Math.floor(Math.random() * 20) + 1;
-  console.log('Random Number = ' + randomNumber);
-}
+// function resGame() {
+//   const randomNumber = Math.floor(Math.random() * 20) + 1;
+//   console.log('Random Number = ' + randomNumber);
+// }
 
 
 
