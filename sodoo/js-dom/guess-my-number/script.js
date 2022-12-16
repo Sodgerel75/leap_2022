@@ -1,4 +1,4 @@
-console.log('------Guess My Number by Sodoo--------');
+console.log('------Guess My Number by Sodoo-------');
 
 let randomNumber = Math.floor(Math.random() * 20) + 1;
 console.log('Random Number = ' + randomNumber);
