@@ -86,10 +86,14 @@ function findSame(array) {
             if (array[i].age == array[j].age) {
                 a = array[i];
                 b = array[j];
-                sameAgedStudent.push(a);
-                sameAgedStudent.push(b);
-                console.log(a.name + ' нас = ' + b.name + ' нас');
+                console.log('Ижил настай сурагчид: ' + a.name + ', ' + b.name);
             }
+        }
+        if (!sameAgedStudent.includes(a)) {
+            sameAgedStudent.push(a)
+        }
+        if (!sameAgedStudent.includes(b)) {
+            sameAgedStudent.push(b)
         }
     }
     console.log(sameAgedStudent);
