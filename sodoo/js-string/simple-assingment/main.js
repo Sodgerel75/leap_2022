@@ -19,5 +19,5 @@ let district = 'Сүхбаатар'
 console.log('Hi, намайг ' + lName + ' овогтой ' + fName + ' гэдэг.' + '\nБи ' + city + ' хотын ' + district + ' дүүрэгт амьдардаг.');
 
 
-
+console.log('1 2 3 4 5 \n2 3 4 5 1 \n3 4 5 1 2 \n4 5 1 2 3 \n5 1 2 3 4');
 
