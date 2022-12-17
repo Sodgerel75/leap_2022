@@ -27,6 +27,7 @@ let students = [
 ]
 // console.log(students);
 
+// 1. Ангид хэдэн эрэгтэй , эмэгтэй сурагч байгааг олох object буцаадаг функц бичих 
 
 function findGender(array) {
     let maleStudents = 0;
@@ -46,9 +47,7 @@ function findGender(array) {
 console.log(findGender(students));
 
 
-
-
-
+// 2. Сурагчдын насны дунджийг олох функц бичих 
 
 function findAverageAge(array) {
     let ages = 0;
@@ -59,11 +58,10 @@ function findAverageAge(array) {
     // console.log(ages / array.length);
     return ages / array.length;
 }
-
 console.log('Сурагчдын дундаж нас = ' + findAverageAge(students));
 
 
-
+// 3. Сурагчидад овог нэмж оруулах 
 
 function OvogAdd(array) {
     for (let i = 0; i < array.length; i++) {
@@ -75,33 +73,48 @@ function OvogAdd(array) {
 console.log(OvogAdd(students));
 
 
-
-
-
 // 4. Ижилхэн настай сурагчдыг олж шинэ array дотор хийх  
-console.log("\n4. Ижилхэн настай сурагчдыг олж шинэ array дотор хийх  ");
-findSameAgedStudents(students);
 
+console.log("\n4. Ижилхэн настай сурагчдыг олж шинэ array дотор хийх");
 
-function findSameAgedStudents(array) {
+findSame(students);
+
+function findSame(array) {
     let sameAgedStudent = [];
     for (let i = 0; i < array.length; i++) {
         for (let j = i + 1; j < array.length; j++) {
             if (array[i].age == array[j].age) {
                 a = array[i];
                 b = array[j];
+                sameAgedStudent.push(a);
+                sameAgedStudent.push(b);
                 console.log(a.name + ' нас = ' + b.name + ' нас');
             }
-        }
-        if (!sameAgedStudent.includes(a)) {
-            sameAgedStudent.push(a)
-        }
-        if (!sameAgedStudent.includes(b)) {
-            sameAgedStudent.push(b)
         }
     }
     console.log(sameAgedStudent);
 }
+
+
+// function findSame(array) {
+//     let sameAgedStudent = [];
+//     for (let i = 0; i < array.length; i++) {
+//         for (let j = i + 1; j < array.length; j++) {
+//             if (array[i].age == array[j].age) {
+//                 a = array[i];
+//                 b = array[j];
+//                 console.log(a.name + ' нас = ' + b.name + ' нас');
+//             }
+//         }
+//         if (!sameAgedStudent.includes(a)) {
+//             sameAgedStudent.push(a)
+//         }
+//         if (!sameAgedStudent.includes(b)) {
+//             sameAgedStudent.push(b)
+//         }
+//     }
+//     console.log(sameAgedStudent);
+// }
 
 
 
