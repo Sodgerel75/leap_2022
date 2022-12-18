@@ -60,9 +60,9 @@ const users = [
 
 // 1. Нэг хэрэглэгчийн объектын бүх утгыг авч хэвлэх.
 
-function printUser(array, too) {
-    let userOb = array[too];
-    return userOb;
+function printUser(array, index) {
+    let userObject = (Object.values(array[index])).join(', ');
+    return userObject;
 }
 
 console.log(printUser(users, 0));
@@ -138,23 +138,6 @@ console.log('MERN stack users: ' + findMern(users).join(', '));
 
 
 // 5. Хамгийн их настай 3 хүмүүсийн мэдээллийг хэвлэх
-
-
-
-
-
-
-
-// console.log('\n5. Хамгийн хөгшин 3 хүмүүсийн мэдээллийг хэвлэх');
-// findOlder(users);
-
-// function findOlder(array) {
-//     let userOlder = []
-//     array.sort((firstItem, secondItem) => secondItem.age - firstItem.age);
-//     for (let i = 0; i < 3; i++) {
-//         console.log(JSON.stringify(array[i], null, 2));
-//     }
-// }
 
 
 
