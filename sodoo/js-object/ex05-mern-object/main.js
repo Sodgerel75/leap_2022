@@ -58,18 +58,54 @@ const users = [
 ]
 
 
+// 1. Нэг хэрэглэгчийн объектын бүх утгыг авч хэвлэх.
+
 function printUser(array, too) {
     let userOb = array[too];
     return userOb;
 }
 
-console.log(printUser(users, 2));
+console.log(printUser(users, 0));
+
+
+// 2. Хэрэглэгчийн объектод олон ур чадвар эзэмшсэн хүнийг олоорой.
+
+function findMoreSkills(array) {
+    let moreSkills = [];
+    let moreSkillsUser = [];
+    for (let i = 0; i < array.length; i++) {
+        moreSkills.push(array[i].skills.length)
+        // if (Math.max.apply(null, moreSkills)) {
+        //     moreSkillsUser.push(array[i].name);
+        // }
+    }
+    // return moreSkillsUser;
+    return Math.max.apply(null, moreSkills);
+}
+
+console.log(findMoreSkills(users));
 
 
 
 
 
 
+
+// Array.prototype.max = function () {
+//     return Math.max.apply(null, this);
+// };
+
+// let p = [35, 2, 65, 7, 8, 9, 12, 121, 33, 99];
+
+// console.log(`Max value is: ${p.max()}`);
+// console.log(`Max value is: ${findMoreSkills(users).max()}`);
+
+
+
+
+
+
+// 3. Нэвтэрсэн хэрэглэгчдийг тоолж, дараах объектоос 50-аас дээш оноо авсан хэрэглэгчдийг тоол.
 
 function findLogin50(array) {
     let tempUsers = [];
@@ -80,9 +116,22 @@ function findLogin50(array) {
     }
     return tempUsers;
 }
-
+console.log('Нэвтэрсэн хэрэглэгч = ' + findLogin50(users).length);
 console.log('50-аас дээш оноо авсан  - ' + findLogin50(users).join(', '));
 
+
+// 4. Хэрэглэгчийн объектоос MERN ( MongoDB, Express, React, Node ) стек хөгжүүлэгч хүмүүсийг олоорой.
+
+function findMern(array) {
+    let mernUser = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].skills.includes('MongoDB') && array[i].skills.includes('Express') && array[i].skills.includes('React') && array[i].skills.includes('Node')) {
+            mernUser.push(array[i].name);
+        }
+    }
+    return mernUser;
+}
+console.log('MERN stack users: ' + findMern(users).join(', '));
 
 
 
