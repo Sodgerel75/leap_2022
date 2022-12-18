@@ -10,18 +10,19 @@ console.log(document.getElementById("aimag-315").innerHTML);
 
 console.log('4. Тухайн жагсаалтын элементүүдэд загвар оруулах');
 // let myList = document.querySelectorAll('li');
-// document.getElementById("aimagNames").style = 'font-size: 30px; color: blue; padding: 5px 20px; border-radius: 5px; margin: 20px;'
-console.log(document.getElementById("aimagNames").getElementsByTagName('li'));
+document.getElementById("aimagNames").style = 'font-size: 30px; color: blue; padding: 5px 20px; border-radius: 5px; margin: 20px;'
+// console.log(document.getElementById("aimagNames").getElementsByTagName('li'));
 
 
-let myList = document.getElementById("aimagNames").getElementsByTagName('li');
+// let myList = document.getElementById("aimagNames").getElementsByTagName('li');
 
-function styler(array) {
-    for (let i = 0; i < array.length; i++) {
-        array[i].style = 'font-size: 30px; color: blue; padding: 5px 20px; border-radius: 5px; margin: 20px;'
-    }
-}
-console.log(styler(myList)[i]);
+// function styler(array) {
+//     for (let i = 0; i < array.length; i++) {
+//         array[i].style = 'font-size: 30px; color: blue; padding: 5px 20px; border-radius: 5px; margin: 20px;'
+//     }
+// }
+// styler(myList)[i]
+// console.log(styler(myList)[i]);
 
 
 
