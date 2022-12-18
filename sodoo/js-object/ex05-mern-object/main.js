@@ -68,40 +68,43 @@ function printUser(array, too) {
 console.log(printUser(users, 0));
 
 
-// 2. Хэрэглэгчийн объектод олон ур чадвар эзэмшсэн хүнийг олоорой.
 
-function findMoreSkills(array) {
-    let moreSkills = [];
-    let moreSkillsUser = [];
-    for (let i = 0; i < array.length; i++) {
-        moreSkills.push(array[i].skills.length)
-        // if (Math.max.apply(null, moreSkills)) {
-        //     moreSkillsUser.push(array[i].name);
-        // }
-    }
-    // return moreSkillsUser;
-    return Math.max.apply(null, moreSkills);
-}
+
+// 2. Хэрэглэгчийн объектод олон ур чадвар эзэмшсэн хүнийг олоорой.
 
 console.log(findMoreSkills(users));
 
+function findMoreSkills(array) {
+    let tempObject = array[0];
+    let mostUser;
+    for (let i = 0; i < array.length; i++) {
+        // console.log('Давталт ' + i);
+        if (Number(tempObject.skills.length) < Number(array[i].skills.length)) {
+            // console.log('olov');
+            mostUser = `Олон ур чадвартай хүн : ${array[i].name} (${array[i].skills.length} skills)`;
+            tempObject = array[i];
+            // console.log(tempObject);
+        }
+    }
+    return mostUser;
+}
 
 
 
 
-
-
-// Array.prototype.max = function () {
-//     return Math.max.apply(null, this);
-// };
-
-// let p = [35, 2, 65, 7, 8, 9, 12, 121, 33, 99];
-
-// console.log(`Max value is: ${p.max()}`);
-// console.log(`Max value is: ${findMoreSkills(users).max()}`);
-
-
-
+// function findMoreSkills(array) {
+//     let moreSkills = [];
+//     let moreSkillsUser = [];
+//     for (let i = 0; i < array.length; i++) {
+//         moreSkills.push(array[i].skills.length)
+//         if (Number(Math.max.apply(null, moreSkills)) == Number(array[i].skills.length)) {
+//             moreSkillsUser.push(array[i].name);
+//         }
+//     }
+//     return moreSkillsUser;
+//     // return Math.max.apply(null, moreSkills);
+// }
+// console.log(findMoreSkills(users));
 
 
 
@@ -134,6 +137,24 @@ function findMern(array) {
 console.log('MERN stack users: ' + findMern(users).join(', '));
 
 
+// 5. Хамгийн их настай 3 хүмүүсийн мэдээллийг хэвлэх
+
+
+
+
+
+
+
+// console.log('\n5. Хамгийн хөгшин 3 хүмүүсийн мэдээллийг хэвлэх');
+// findOlder(users);
+
+// function findOlder(array) {
+//     let userOlder = []
+//     array.sort((firstItem, secondItem) => secondItem.age - firstItem.age);
+//     for (let i = 0; i < 3; i++) {
+//         console.log(JSON.stringify(array[i], null, 2));
+//     }
+// }
 
 
 
