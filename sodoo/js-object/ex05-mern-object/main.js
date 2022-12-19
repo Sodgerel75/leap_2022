@@ -139,8 +139,14 @@ console.log('MERN stack users: ' + findMern(users).join(', '));
 
 // 5. Хамгийн их настай 3 хүмүүсийн мэдээллийг хэвлэх
 
+function findOlder(array) {
+    array.sort((firstItem, secondItem) => secondItem.age - firstItem.age);
+    for (let i = 0; i < 3; i++) {
+        console.log(array[i]);
+    }
+}
 
-
+findOlder(users);
 
 
 

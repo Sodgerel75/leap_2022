@@ -3,8 +3,8 @@ let num = document.getElementById('colorSelect');
 
 console.log(num);
 
-function delList() {
-
+function delList(event) {
+    event.parentNode.remove(event)
 }
 
 
