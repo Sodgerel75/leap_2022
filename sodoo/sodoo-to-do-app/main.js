@@ -21,7 +21,7 @@ function addTask() {
 
     // p.innerHTML = task.value + ' <button>edit</button>' + ' <button>done</button>' + ' <button id="del-btn">del</button>';
     p.innerHTML = `
-    <input value=${task.value} class="form-control" disabled> 
+    <input value="${task.value}" class="form-control" disabled> 
     <button id="edit-btn" onclick="editFunc(this)"  class="btn btn-warning"><i class="bi bi-pencil"></i></button> 
     <button onclick="doneFunc(this)" class="btn btn-success"><i class="bi bi-check-circle"></i></button>  
     <button id="del-btn-${toDoArr.length + 1} " onclick="delP(this)" class="btn btn-danger"><i class="bi bi-trash"></i></button>
@@ -77,7 +77,14 @@ function editFunc(event) {
     // document.getElementsByTagName(input).disabled = false;
     // console.log(document.getElementsByTagName(input));
     console.log(event.parentNode.childNodes);
-    event.parentNode.childNodes[1].disabled = false;
+    if (event.parentNode.childNodes[1].disabled) {
+        event.parentNode.childNodes[1].disabled = false;
+        document.getElementById('edit-btn').innerHTML = '<i class="bi bi-check2-square"></i>';
+    }
+    else {
+        event.parentNode.childNodes[1].disabled = true;
+        document.getElementById('edit-btn').innerHTML = '<i class="bi bi-check2-square"></i></i>';
+    }
 }
 
 // let editButton = document.getElementById('edit-btn')
@@ -97,5 +104,5 @@ function doneFunc(event) {
     // document.getElementsByTagName(input).disabled = false;
     // console.log(document.getElementsByTagName(input));
     console.log(event.parentNode.childNodes);
-    event.parentNode.childNodes[1].disabled = true;
+    // event.parentNode.childNodes[1].style = color:;
 }
