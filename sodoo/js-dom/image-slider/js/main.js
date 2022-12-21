@@ -72,4 +72,3 @@ for (let i = 0; i < imgCon.length; i++) {
         imgCon[i].innerHTML = '<h2>TEST</h2>'
     })
 }
-
