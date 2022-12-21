@@ -5,9 +5,9 @@
 
 .container {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     margin: 0 auto;
-    width: 1200px;
+    width: 1000px;
 }
 
 .col {
@@ -16,7 +16,7 @@
     height: 500px;
     background-position: center;
     background-size: cover;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: 0.5s;
     border: none;
 }
