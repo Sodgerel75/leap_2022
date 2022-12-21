@@ -58,7 +58,7 @@
 
 
 let imgCon = document.getElementById('container').children;
-imgCon[0].style.width = '300%';
+imgCon[0].style.width = '600%';
 for (let i = 0; i < imgCon.length; i++) {
     imgCon[i].addEventListener('click', (self) => {
         console.log(self.target);
@@ -68,8 +68,8 @@ for (let i = 0; i < imgCon.length; i++) {
                 imgCon[j].innerHTML = '';
             }
         }
-        self.target.style = 'width:300%';
-        imgCon[i].innerHTML = 'test'
+        self.target.style = 'width:600%';
+        imgCon[i].innerHTML = '<h2>TEST</h2>'
     })
 }
 
