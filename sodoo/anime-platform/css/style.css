@@ -47,7 +47,6 @@ p {
     font-size: 12px;
     height: 230px;
     overflow: auto;
-    text-align: justify;
     padding: 5px;
 
 }
@@ -108,7 +107,12 @@ button {
     margin-left: 35px;
 }
 
+.synoText1 {
+    text-align: justify;
+}
+
 .synoText2 {
+    text-align: justify;
     display: none;
 }
 
