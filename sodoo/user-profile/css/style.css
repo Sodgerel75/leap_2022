@@ -3,118 +3,86 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#conAll {
-    display: grid;
-    grid-template-columns: repeat(3, 310px);
-    gap: 30px;
-    justify-content: center;
+body {
+    background-color: rgb(224, 224, 224);
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    margin: 0 auto;
-    width: 300px;
-    /* height: 370px; */
-    border: 1px solid rgb(213, 213, 213);
+    margin: 200px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 20px;
+    justify-content: center;
+    width: 1000px;
+
 }
 
-.card-header h6 {
-    text-align: center;
-    font-size: 15px;
-    color: rgb(39, 79, 166);
-    margin: 20px 5px;
+
+
+
+h6 {
+    margin-top: 110px;
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: 300;
 }
 
-.row {
+
+.card {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 450px;
+    /* border: 1px solid rgb(255, 255, 255); */
+    border-radius: 20px;
+}
 
+.card-header {
+    position: relative;
+    /* background-color: rgb(93, 158, 255); */
+    color: white;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 240px;
+    margin-bottom: 0;
 }
 
 img {
-    width: 9rem;
+    position: absolute;
+    top: -30px;
+    left: 140px;
+    border-radius: 50%;
+    width: 120px;
+    border: 5px solid white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
-p {
-    padding: 5px 1px;
-    margin: 0;
-    /* background-color: rgb(245, 245, 245); */
+ul {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+li {
+    list-style-type: none;
+
+    margin-left: 2rem;
+    color: rgb(70, 70, 70);
+    margin-bottom: 20px;
+}
+
+
+.money {
     text-align: center;
-    font-size: 13px;
-    color: gray;
-}
-
-.text-con {
-    font-size: 12px;
-    height: 230px;
-    overflow: auto;
-    text-align: justify;
-    padding: 5px;
-
-}
-
-.fa {
-    color: gray;
-}
-
-.genres {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(222, 222, 222);
-}
-
-.genres a {
-    color: rgb(144, 144, 144);
-    font-size: 8px;
-    padding: 1px 6px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
-    margin: 5px 2px;
-    border: 1px solid rgb(198, 198, 198);
-    text-decoration: none;
-}
-
-.row div {
-    color: rgb(53, 53, 53);
+    margin-top: 10px;
+    color: grey;
     font-weight: 500;
-    font-size: 11px;
-}
-
-.footer {
-    background-color: rgb(245, 245, 245);
-    align-items: center;
-    padding: 3px;
-}
-
-button {
-    font-size: 11px;
-    background-color: #4f74c8;
-    color: white;
-    padding: 4px 20px;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-}
-
-#switcher {
-    background-color: white;
-    color: gray;
-    margin-left: 35px;
-}
-
-#studio,
-#theme {
-    margin: 5px 0;
-    padding: 2px 0;
-    background-color: rgb(235, 235, 235);
-}
-
-a {
-    color: #4f74c8;
-    text-decoration: none;
-}
-
-.status-anime i {
     font-size: 20px;
-    color: #4f74c8;
-    margin: 5px;
+}
+
+.bi {
+    margin-right: 10px;
 }

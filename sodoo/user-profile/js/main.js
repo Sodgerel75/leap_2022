@@ -1,75 +1,68 @@
 // console.log('------------- User Profile Ex ---------------');
 
-const card = document.querySelectorAll('#card');
+
 
 function getCard(data) {
     return `
-    <div id="card" class="container">
-            <div class="card-header">
-                <h6>${data.title}</h6>
-            </div>
-            <div class="status-anime"
-                style="display: flex; justify-content: space-between; background-color: rgb(245, 245, 245); align-items: center;">
-                <i class="bi bi-play-btn-fill"></i>
-                <p>${data.type}, ${data.year} | ${data.status.substring(0, 8)} | ${data.episodes}, ${data.duration.substring(0, 6)}</p>
-                <i class="bi bi-broadcast-pin"></i>
-            </div>
-            <div class="genres" id="genres">
-            </div>
-            <div class="row">
-                <div>
-                    <img src=${data.images.jpg.image_url} alt="" id="manga-image">
-                </div>
-                <div class="text-con">
-                    <div id="synopsis">${data.synopsis.substring(0, 250)}</div>
-                    <button id="switcher"><i class="bi bi-caret-down"></i></button>
-                    <div>
-                        <div id="studio"><b>Studio: </b><a href="${data.studios[0].url}"> ${data.studios[0].name}</a></div>
-                        <div id="source"><b>Source: </b>${data.source}</div>
-                        <div id="theme"><b>Theme: </b>TEST</div>
-                        <div id="demo"><b>Demographic: </b><a href="">TEST</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row footer">
-                <div id="score"><i class="bi bi-star"></i> ${data.score}</div>
-                <div id="members"><i class="bi bi-person-fill"></i> ${(data.members / 1.0e+6).toFixed(1)} M</div>
-                <button>Add to List</button>
-            </div>
+    <div class="card">
+        <div class="card-header" style = "background-color: rgb(${randomRgbColor()})">
+            <img src="${data.picture.large}" alt="">
+            <h6>${data.name.first} ${data.name.last}</h6>
+            <p>${data.email}</p>
+            <p>${data.phone}</p>
         </div>
+        <ul>
+            <li><i class="bi bi-circle-fill" style = "color: rgb(${randomRgbColor()})"></i> Post Code - ${data.location.postcode}</li>
+            <li><i class="bi bi-circle-fill" style = "color: rgb(${randomRgbColor()})"></i> Location - ${data.location.city}, ${data.location.country}</li>
+            <li><i class="bi bi-circle-fill" style = "color: rgb(${randomRgbColor()})"></i> Facebook - ${data.login.username}</li>
+        </ul>
+        <p class="money">Total Amount Spent $ ${data.location.street.number}</p>
+    </div>
     `
+
+
 }
-
-// fetch('https://api.jikan.moe/v4/top/anime')
-//     .then((result) => result.json())
-//     .then((topAnimes) => {
-//         // console.log(topAnimes);
-//         const top25 = topAnimes.data;
-//         // console.log(top25);
-
-//         const conAllDom = document.getElementById('conAll');
-//         // console.log(conAllDom);
-
-//         conAllDom.innerHTML = '';
-//         top25.map((element) => {
-//             conAllDom.innerHTML += getCard(element)
-//         })
-//     })
-
-
 
 fetch('https://randomuser.me/api')
     .then((result) => result.json())
-    .then((topAnimes) => {
-        // console.log(topAnimes);
-        const top25 = topAnimes.data;
-        // console.log(top25);
+    .then((randomUsers) => {
+        console.log(randomUsers);
+
+        const user = randomUsers.results[0]
+        console.log(user.name.first);
 
         const conAllDom = document.getElementById('conAll');
-        // console.log(conAllDom);
-
-        conAllDom.innerHTML = '';
-        top25.map((element) => {
-            conAllDom.innerHTML += getCard(element)
-        })
+        conAllDom.innerHTML = getCard(user)
     })
+
+fetch('https://randomuser.me/api')
+    .then((result) => result.json())
+    .then((randomUsers) => {
+        const user = randomUsers.results[0]
+        const conAllDom = document.getElementById('conAll2');
+        conAllDom.innerHTML = getCard(user)
+    })
+
+fetch('https://randomuser.me/api')
+    .then((result) => result.json())
+    .then((randomUsers) => {
+        const user = randomUsers.results[0]
+        const conAllDom = document.getElementById('conAll3');
+        conAllDom.innerHTML = getCard(user)
+    })
+
+function randomRgbColor() {
+    let r = Math.floor(Math.random() * 255);
+    let g = Math.floor(Math.random() * 255);
+    let b = Math.floor(Math.random() * 255);
+    return [r, g, b].toString();
+}
+
+
+let color = document.getElementsByTagName('card-header').style = `"background-color: rgb(${randomRgbColor()})"`;
+console.log(color);
+
+
+
+
+
