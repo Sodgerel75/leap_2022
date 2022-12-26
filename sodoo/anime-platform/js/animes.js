@@ -108,7 +108,7 @@ function getCard(data, index) {
         const result = `<a href="#">${genre.name}</a>`
         return result;
     })
-    console.log(genres);
+    // console.log(genres);
 
     // console.log(data.themes);
     const themesText = data.themes.map(themes => {
@@ -117,7 +117,7 @@ function getCard(data, index) {
         return result;
     })
 
-    console.log(data.demographics);
+    // console.log(data.demographics);
     const Demog = data.demographics.map(themes => {
 
         const result = `<a href="${themes.url}">${themes.name}</a>`
@@ -131,6 +131,7 @@ function getCard(data, index) {
 
     let shortText = true;
     let synoText = data.synopsis.substring(0, 200)
+    let synoText2 = data.synopsis
 
     // function switchFunc(event) {
     //     synoText = data.synopsis.substring(0, 200)
@@ -170,9 +171,10 @@ function getCard(data, index) {
                     <img src=${data.images.jpg.image_url} alt="" id="manga-image">
                 </div>
                 <div class="text-con">
-                    <div id="synopsis_${index}">${synoText}</div>
-                    <div id="button_${index}"></div>
-                    <button id="${index}" class="showMore" ><i class="bi bi-caret-down"></i></button>
+                    <div class="synoText1" id="synopsis_${index}">${synoText}</div>
+                    <div class="synoText2"  id="synopsisDe_${index}">${synoText2}</div>
+                    <button id="${index}" class="showMore1" ><i class="bi bi-caret-down"></i></button>
+                    <button id="min_${index}" class="showMore2" ><i class="bi bi-caret-up"></i></button>
                     <div>
                         <div id="studio"><b>Studio: </b><a href="${data.studios[0].url}"> ${data.studios[0].name}</a></div>
                         <div id="source"><b>Source: </b>${data.source}</div>
@@ -228,9 +230,13 @@ fetch('https://api.jikan.moe/v4/top/anime')
         //     console.log('lcick')
         // })
 
-        let buttons = document.getElementsByClassName('showMore');
+        let buttons = document.getElementsByClassName('showMore1');
         var btnsArr = Array.prototype.slice.call(buttons);
         console.log(btnsArr);
+
+        let buttonsMin = document.getElementsByClassName('showMore2');
+        var btnsArrMin = Array.prototype.slice.call(buttonsMin);
+        console.log(btnsArrMin);
 
         btnsArr.map((btn, idx) => {
             btn.addEventListener('click', (event) => {
@@ -244,15 +250,39 @@ fetch('https://api.jikan.moe/v4/top/anime')
                 console.log(idx)
 
                 const syn = document.getElementById(`synopsis_${idx}`)
-                console.log(syn)
-                syn.innerHTML = synopisFil[0].synopsis
+                syn.style = 'display: none';
 
+                const syn2 = document.getElementById(`synopsisDe_${idx}`)
+                syn2.style = 'display: block';
 
-                // let synoText = el[0].synopsis.substring(0, 200)
-                // console.log(el[0].synopsis)
+                const buttonMin = document.getElementById(`min_${idx}`)
+                buttonMin.style = 'display: block';
+                const buttonMax = document.getElementById(`${idx}`)
+                buttonMax.style = 'display: none';
+            })
+        })
 
+        btnsArrMin.map((btn, idx) => {
+            btn.addEventListener('click', (event) => {
+                console.log(event.target.id)
+                const synopisFil = top25.filter((el, index) => {
+                    if (index == event.target.id) {
+                        return el
+                    }
+                });
+                console.log(synopisFil);
+                console.log(idx)
 
+                const syn = document.getElementById(`synopsis_${idx}`)
+                syn.style = 'display: block';
 
+                const syn2 = document.getElementById(`synopsisDe_${idx}`)
+                syn2.style = 'display: none';
+
+                const buttonMin = document.getElementById(`min_${idx}`)
+                buttonMin.style = 'display: none';
+                const buttonMax = document.getElementById(`${idx}`)
+                buttonMax.style = 'display: block';
             })
         })
     })

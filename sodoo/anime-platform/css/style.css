@@ -95,10 +95,21 @@ button {
     cursor: pointer;
 }
 
-.showMore {
+.showMore1 {
     background-color: white;
     color: gray;
     margin-left: 35px;
+}
+
+.showMore2 {
+    display: none;
+    background-color: white;
+    color: gray;
+    margin-left: 35px;
+}
+
+.synoText2 {
+    display: none;
 }
 
 #studio,
