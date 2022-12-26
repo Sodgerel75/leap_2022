@@ -98,7 +98,58 @@
 
 const card = document.querySelectorAll('#card');
 
-function getCard(data) {
+
+
+function getCard(data, index) {
+
+    // console.log(data.genres);
+    const genres = data.genres.map(genre => {
+        // console.log(genre);
+        const result = `<a href="#">${genre.name}</a>`
+        return result;
+    })
+
+    // console.log(data.themes);
+    const themesText = data.themes.map(themes => {
+
+        const result = `<a href="${themes.url}">${themes.name}</a>`
+        return result;
+    })
+
+    console.log(data.demographics);
+    const Demog = data.demographics.map(themes => {
+
+        const result = `<a href="${themes.url}">${themes.name}</a>`
+        return result;
+    })
+
+
+
+    // let switcherButton = document.getElementById(switcher_${index});
+    // switcherButton.addEventListener('click', switchFunc)
+
+    let shortText = true;
+    let synoText = data.synopsis.substring(0, 200)
+
+    // function switchFunc(event) {
+    //     synoText = data.synopsis.substring(0, 200)
+    //     console.log('--------------------test');
+
+    //     if (shortText) {
+    //         synoText = data.synopsis;
+    //         console.log('test');
+    //         shortText = false
+    //     }
+    //     else {
+    //         synoText = data.synopsis.substring(0, 300);
+    //         shortText = true
+    //         console.log('tes2');
+    //     }
+    // }
+
+
+    // console.log('data', data)
+    let text = "string"
     return `
     <div id="card" class="container">
             <div class="card-header">
@@ -111,19 +162,21 @@ function getCard(data) {
                 <i class="bi bi-broadcast-pin"></i>
             </div>
             <div class="genres" id="genres">
+            ${genres}
             </div>
             <div class="row">
                 <div>
                     <img src=${data.images.jpg.image_url} alt="" id="manga-image">
                 </div>
                 <div class="text-con">
-                    <div id="synopsis">${data.synopsis.substring(0, 250)}</div>
-                    <button id="switcher"><i class="bi bi-caret-down"></i></button>
+                    <div id="synopsis_${index}">${synoText}</div>
+                    <div id="button_${index}"></div>
+                    <button id="${index}" class="showMore" ><i class="bi bi-caret-down"></i></button>
                     <div>
                         <div id="studio"><b>Studio: </b><a href="${data.studios[0].url}"> ${data.studios[0].name}</a></div>
                         <div id="source"><b>Source: </b>${data.source}</div>
-                        <div id="theme"><b>Theme: </b>TEST</div>
-                        <div id="demo"><b>Demographic: </b><a href="">TEST</a></div>
+                        <div id="theme"><b>Theme: </b>${themesText}</div>
+                        <div id="demo"><b>Demographic: </b>${Demog}</div>
                     </div>
                 </div>
             </div>
@@ -141,27 +194,8 @@ function getCard(data) {
 
 // let switcherButton = document.getElementById('switcher');
 // switcherButton.addEventListener('click', switchFunc)
-// let shortText = true;
-// let synoText = data.synopsis.substring(0, 200)
-// function switchFunc() {
-
-//     synoText = data.synopsis.substring(0, 200)
-//     console.log('--------------------test');
 
 
-//     if (shortText) {
-//         synoText = data.synopsis;
-//         document.getElementById('switcher').innerHTML = '<i class="bi bi-caret-up"></i>';
-//         console.log('test');
-//         shortText = false
-//     }
-//     else {
-//         synoText = data.synopsis.substring(0, 300);
-//         document.getElementById('switcher').innerHTML = '<i class="bi bi-caret-down"></i>';
-//         shortText = true
-//         console.log('tes2');
-//     }
-// }
 
 
 fetch('https://api.jikan.moe/v4/top/anime')
@@ -174,8 +208,85 @@ fetch('https://api.jikan.moe/v4/top/anime')
         const conAllDom = document.getElementById('conAll');
         // console.log(conAllDom);
 
-        conAllDom.innerHTML = '';
-        top25.map((element) => {
-            conAllDom.innerHTML += getCard(element)
+        // conAllDom.innerHTML = '';
+        let result = ''
+        top25.map((element, index) => {
+            result += getCard(element, index);
+
+
+            // btnContainer.appendChild(newButton);
+            // conAllDom.appendChild(btnContainer);
+
         })
+
+        conAllDom.innerHTML = result;
+        // let btn = document.getElementById(`switcher_${index}`)
+        // // let btnContainer = document.getElementById(`button_${index}`)
+        // // const newButton = document.createElement('button');
+        // btn.addEventListener('click', (event) => {
+        //     console.log('lcick')
+        // })
+
+        let buttons = document.getElementsByClassName('showMore');
+        var btnsArr = Array.prototype.slice.call(buttons);
+        console.log(btnsArr);
+
+        btnsArr.map((btn, idx) => {
+            btn.addEventListener('click', (event) => {
+                console.log(event.target.id)
+                const synopis = top25.filter((el, index) => {
+                    if (index == event.target.id) {
+                        return el
+                    }
+                });
+                console.log(synopis);
+                console.log(idx)
+
+                const syn = document.getElementById(`synopsis_${idx}`)
+                console.log(syn)
+                syn.innerHTML = synopis[0].synopsis
+
+
+                // let synoText = el[0].synopsis.substring(0, 200)
+                // console.log(el[0].synopsis)
+
+
+
+            })
+        })
+
+
+
+
+
+
+
+
     })
+
+function switchFunc(p1, p2) {
+    // console.log('data', p1)
+
+    // console.log(typeof p2)
+
+
+
+    // let shortText = true;
+    // let synoText = data.synopsis.substring(0, 200)
+    // synoText = data.synopsis.substring(0, 200)
+    // console.log('--------------------test');
+
+
+    // if (shortText) {
+    //     synoText = data.synopsis;
+    //     document.getElementById('switcher').innerHTML = '<i class="bi bi-caret-up"></i>';
+    //     console.log('test');
+    //     shortText = false
+    // }
+    // else {
+    //     synoText = data.synopsis.substring(0, 300);
+    //     document.getElementById('switcher').innerHTML = '<i class="bi bi-caret-down"></i>';
+    //     shortText = true
+    //     console.log('tes2');
+    // }
+}
