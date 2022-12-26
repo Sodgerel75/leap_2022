@@ -108,6 +108,7 @@ function getCard(data, index) {
         const result = `<a href="#">${genre.name}</a>`
         return result;
     })
+    console.log(genres);
 
     // console.log(data.themes);
     const themesText = data.themes.map(themes => {
@@ -162,7 +163,7 @@ function getCard(data, index) {
                 <i class="bi bi-broadcast-pin"></i>
             </div>
             <div class="genres" id="genres">
-            ${genres}
+            ${genres.join('')}
             </div>
             <div class="row">
                 <div>
@@ -175,7 +176,7 @@ function getCard(data, index) {
                     <div>
                         <div id="studio"><b>Studio: </b><a href="${data.studios[0].url}"> ${data.studios[0].name}</a></div>
                         <div id="source"><b>Source: </b>${data.source}</div>
-                        <div id="theme"><b>Theme: </b>${themesText}</div>
+                        <div id="theme"><b>Theme: </b>${themesText.join(', ')}</div>
                         <div id="demo"><b>Demographic: </b>${Demog}</div>
                     </div>
                 </div>
@@ -234,17 +235,17 @@ fetch('https://api.jikan.moe/v4/top/anime')
         btnsArr.map((btn, idx) => {
             btn.addEventListener('click', (event) => {
                 console.log(event.target.id)
-                const synopis = top25.filter((el, index) => {
+                const synopisFil = top25.filter((el, index) => {
                     if (index == event.target.id) {
                         return el
                     }
                 });
-                console.log(synopis);
+                console.log(synopisFil);
                 console.log(idx)
 
                 const syn = document.getElementById(`synopsis_${idx}`)
                 console.log(syn)
-                syn.innerHTML = synopis[0].synopsis
+                syn.innerHTML = synopisFil[0].synopsis
 
 
                 // let synoText = el[0].synopsis.substring(0, 200)
@@ -254,14 +255,6 @@ fetch('https://api.jikan.moe/v4/top/anime')
 
             })
         })
-
-
-
-
-
-
-
-
     })
 
 function switchFunc(p1, p2) {

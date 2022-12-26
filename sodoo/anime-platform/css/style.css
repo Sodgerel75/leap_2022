@@ -95,7 +95,7 @@ button {
     cursor: pointer;
 }
 
-#switcher {
+.showMore {
     background-color: white;
     color: gray;
     margin-left: 35px;
