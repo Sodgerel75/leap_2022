@@ -64,6 +64,7 @@ fetch('https://api.jikan.moe/v4/top/anime')
     .then((topAnimes) => {
         // console.log(topAnimes);
         const top25 = topAnimes.data;
+        console.log(top25);
         const conAllDom = document.getElementById('conAll');
         let result = ''
         top25.map((element, index) => {
