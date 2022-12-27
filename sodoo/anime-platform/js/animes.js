@@ -1,3 +1,16 @@
+let data = [];
+
+async function getData() {
+    const fetchedData = await fetch('https://api.jikan.moe/v4/top/anime')
+    const fetchedJSON = await fetchedData.json();
+    data = fetchedJSON.data;
+    // console.log(data);
+}
+getData();
+
+
+
+
 const select = document.getElementById('genre-selector');
 
 select.addEventListener('change', function handleChange(event) {
@@ -13,36 +26,25 @@ select.addEventListener('change', function handleChange(event) {
 
 
 async function findGenre(event) {
-    console.log('TEst');
     console.log(event.target.value);
-    // const searchVal = document.getElementById('input').value;
-    // console.log(searchVal);
 
-    const animes = await fetch('https://api.jikan.moe/v4/top/anime');
-    const animesJSON = await animes.json();
-    const animesData = animesJSON.data;
-    console.log(animesData);
+    let searchValue = event.target.value;
+    console.log(typeof searchValue);
 
-    const genres = data.genres.map(genre => {
-        const result = genre.name
-        return result;
+    const searchResult = data.filter(el => {
+        const result = el.genres.filter(genre => genre.name.toLowerCase().includes(searchValue.toLowerCase()))
+        if (result.length > 0) {
+            return el
+        }
     })
-    console.log(genres);
-
-
-
-    // console.log(genres);
-    // const searchResult = animesData.filter(el =>
-    //     el.title.toLowerCase().includes(searchVal.toLowerCase())
-    // )
-    // console.log(searchResult);
-
-    // const conAllDom = document.getElementById('conAll');
-    // let result = ''
-    // searchResult.map((element, index) => {
-    //     result += getCard(element, index);
-    // })
-    // conAllDom.innerHTML = result;
+    // ----------------- Render Code -------------------------
+    const conAllDom = document.getElementById('conAll');
+    let render = '';
+    searchResult.map((element, index) => {
+        render += getCard(element, index);
+        conAllDom.innerHTML = render;
+    })
+    // ----------------- Render Code -------------------------
 }
 
 
@@ -56,27 +58,29 @@ async function searchFunc(event) {
     const searchVal = document.getElementById('input').value;
     console.log(searchVal);
 
-    const animes = await fetch('https://api.jikan.moe/v4/top/anime');
-    const animesJSON = await animes.json();
-    const animesData = animesJSON.data;
-    // console.log(animesData);
-    const searchResult = animesData.filter(el =>
+    const searchResult = data.filter(el =>
         el.title.toLowerCase().includes(searchVal.toLowerCase())
     )
     console.log(searchResult);
 
+    // ----------------- Render Code -------------------------
     const conAllDom = document.getElementById('conAll');
-    let result = ''
+    let render = '';
     searchResult.map((element, index) => {
-        result += getCard(element, index);
+        render += getCard(element, index);
+        conAllDom.innerHTML = render;
     })
-    conAllDom.innerHTML = result;
+    // ----------------- Render Code -------------------------
 }
+
+
 
 // document.addEventListener('keydown', function (event) {
 //     alert(event.keyCode);
 //     searchFunc();
 // });
+
+
 
 function getCard(data, index) {
     // console.log(data.genres);
@@ -84,7 +88,6 @@ function getCard(data, index) {
         const result = `<a href="#">${genre.name}</a>`
         return result;
     })
-    // console.log(genres);
 
     // console.log(data.themes);
     const themesText = data.themes.map(res => {
@@ -117,7 +120,7 @@ function getCard(data, index) {
                     <img src=${data.images.jpg.image_url} alt="" id="manga-image">
                 </div>
                 <div class="text-con">
-                    <div class="synoText1" id="synopsis_${index}">${data.synopsis.substring(0, 200)}</div>
+                    <div class="synoText1" id="synopsis_${index}">${data.synopsis.substring(0, 150)}</div>
                     <div class="synoText2"  id="synopsisDe_${index}">${data.synopsis}</div>
                     <button id="${index}" class="showMore1" ><i class="bi bi-caret-down"></i></button>
                     <button id="min_${index}" class="showMore2" ><i class="bi bi-caret-up"></i></button>
