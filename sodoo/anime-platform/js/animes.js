@@ -8,7 +8,42 @@ select.addEventListener('change', function handleChange(event) {
 
     // // 👇️ get selected TEXT in or outside event handler
     // console.log(select.options[select.selectedIndex].text);
+    findGenre(event)
 });
+
+
+async function findGenre(event) {
+    console.log('TEst');
+    console.log(event.target.value);
+    // const searchVal = document.getElementById('input').value;
+    // console.log(searchVal);
+
+    const animes = await fetch('https://api.jikan.moe/v4/top/anime');
+    const animesJSON = await animes.json();
+    const animesData = animesJSON.data;
+    console.log(animesData);
+
+    const genres = data.genres.map(genre => {
+        const result = genre.name
+        return result;
+    })
+    console.log(genres);
+
+
+
+    // console.log(genres);
+    // const searchResult = animesData.filter(el =>
+    //     el.title.toLowerCase().includes(searchVal.toLowerCase())
+    // )
+    // console.log(searchResult);
+
+    // const conAllDom = document.getElementById('conAll');
+    // let result = ''
+    // searchResult.map((element, index) => {
+    //     result += getCard(element, index);
+    // })
+    // conAllDom.innerHTML = result;
+}
 
 
 
