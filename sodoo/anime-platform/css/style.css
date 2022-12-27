@@ -137,3 +137,16 @@ a {
     color: #4f74c8;
     margin: 5px;
 }
+
+
+.header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    height: 40px;
+    width: 300px;
+}

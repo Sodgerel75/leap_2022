@@ -10,8 +10,12 @@ function getCard(data) {
 fetch('https://restcountries.com/v3.1/all')
     .then(res => res.json())
     .then((country) => {
-        // console.log(country);
-        // console.log(country[0].name.common);
+        console.log(country);
+        console.log(country[5].continents[0]);
+
+        // country.map((element) => {
+        //     console.log(country[element].continents[0]);
+        // })
 
         const conAllDom = document.getElementById('conAll');
 

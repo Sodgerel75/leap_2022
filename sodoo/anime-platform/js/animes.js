@@ -1,3 +1,28 @@
+
+
+async function searchFunc(event) {
+    console.log('event.value');
+    const searchVal = document.getElementById('input').value;
+    console.log(searchVal);
+
+
+    const animes = await fetch('https://api.jikan.moe/v4/top/anime');
+    const animesJSON = await animes.json();
+    const animesData = animesJSON.data;
+    console.log();
+
+    const searchResult = animesData.filter(el =>
+        el.title.toLowerCase().includes(searchVal.toLowerCase())
+    )
+    console.log(searchResult);
+
+    const conAllDom = document.getElementById('conAll');
+    conAllDom.innerHTML = 'test';
+
+}
+
+
+
 function getCard(data, index) {
     // console.log(data.genres);
     const genres = data.genres.map(genre => {
