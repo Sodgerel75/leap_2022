@@ -39,6 +39,12 @@ function selectCountry(event) {
     selectResult.map((element) => {
         conAllDom.innerHTML += getCard(element)
     })
+
+    let too = [];
+    for (let i = 0; i < selectResult.length; i++) {
+        too.push(selectResult[0].population)
+    }
+    console.log(too);
 }
 
 async function searchFunc(event) {
@@ -59,7 +65,7 @@ async function searchFunc(event) {
     conAllDom.innerHTML = '';
     searchResult.map((element) => {
         conAllDom.innerHTML += getCard(element)
-        console.log(element.population);
+        // console.log(element.population);
     })
 }
 
