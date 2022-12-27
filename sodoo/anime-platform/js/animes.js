@@ -1,27 +1,47 @@
+const select = document.getElementById('genre-selector');
+
+select.addEventListener('change', function handleChange(event) {
+    console.log(event.target.value); // 👉️ get selected VALUE
+
+    // // 👇️ get selected VALUE even outside event handler
+    // console.log(select.options[select.selectedIndex].value);
+
+    // // 👇️ get selected TEXT in or outside event handler
+    // console.log(select.options[select.selectedIndex].text);
+});
+
+
+
+
+
+
 
 
 async function searchFunc(event) {
-    console.log('event.value');
     const searchVal = document.getElementById('input').value;
     console.log(searchVal);
-
 
     const animes = await fetch('https://api.jikan.moe/v4/top/anime');
     const animesJSON = await animes.json();
     const animesData = animesJSON.data;
-    console.log();
-
+    // console.log(animesData);
     const searchResult = animesData.filter(el =>
         el.title.toLowerCase().includes(searchVal.toLowerCase())
     )
     console.log(searchResult);
 
     const conAllDom = document.getElementById('conAll');
-    conAllDom.innerHTML = 'test';
-
+    let result = ''
+    searchResult.map((element, index) => {
+        result += getCard(element, index);
+    })
+    conAllDom.innerHTML = result;
 }
 
-
+// document.addEventListener('keydown', function (event) {
+//     alert(event.keyCode);
+//     searchFunc();
+// });
 
 function getCard(data, index) {
     // console.log(data.genres);
