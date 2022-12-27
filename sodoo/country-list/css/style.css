@@ -19,6 +19,8 @@ body {
 
 h6 {
     margin-left: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 12px;
     font-weight: 600;
     color: rgb(59, 59, 59);
@@ -34,6 +36,9 @@ h6 {
     height: 60px;
 }
 
+.pop {
+    font-size: 10px;
+}
 
 img {
     border-radius: 5px;
@@ -52,4 +57,9 @@ img {
 input {
     height: 40px;
     width: 200px;
+}
+
+#howMany {
+    margin: 10px 0 0 100px;
+
 }

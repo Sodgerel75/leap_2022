@@ -4,27 +4,42 @@ fetch('https://restcountries.com/v3.1/all')
     .then(res => res.json())
     .then((country) => {
         data = country
-        console.log(data);
-        // console.log(country[5].continents[0]);
-
-        // country.map((element) => {
-        //     console.log(country[element].continents[0]);
-        // })
-
+        // console.log(data);
         // ----------------------- Render Code ------------------------
         const conAllDom = document.getElementById('conAll');
         conAllDom.innerHTML = '';
-        country.map((element) => {
+        data.map((element) => {
             conAllDom.innerHTML += getCard(element)
+            // console.log(element.continents[0]);
         })
-        // ----------------------- Render Code ------------------------
     })
 
+const select = document.getElementById('continents');
 
+select.addEventListener('change', function handleChange(event) {
+    // console.log(event.target.value);
+    selectCountry(event);
+})
 
+function selectCountry(event) {
+    // console.log(event.target.value);
+    let searchValue = event.target.value.toLowerCase();
+    console.log(searchValue);
+    // console.log(typeof searchValue);
 
-
-
+    const selectResult = data.filter(el =>
+        el.continents[0].toLowerCase().includes(searchValue)
+    )
+    console.log(selectResult);
+    // console.log(selectResult.length);
+    document.getElementById('howMany').innerHTML = ` Улсын тоо = ${selectResult.length}`;
+    // ----------------------- Render Code ------------------------
+    const conAllDom = document.getElementById('conAll');
+    conAllDom.innerHTML = '';
+    selectResult.map((element) => {
+        conAllDom.innerHTML += getCard(element)
+    })
+}
 
 async function searchFunc(event) {
     const searchVal = document.getElementById('input').value;
@@ -35,29 +50,27 @@ async function searchFunc(event) {
     // console.log(countryJSON);
 
     const searchResult = data.filter(el =>
-        el.name.common.toLowerCase().includes(searchVal.toLowerCase())
+        el.name.official.toLowerCase().includes(searchVal.toLowerCase())
     )
     console.log(searchResult);
-
+    document.getElementById('howMany').innerHTML = ` Улсын тоо = ${searchResult.length}`;
     // ----------------------- Render Code ------------------------
     const conAllDom = document.getElementById('conAll');
     conAllDom.innerHTML = '';
     searchResult.map((element) => {
         conAllDom.innerHTML += getCard(element)
+        console.log(element.population);
     })
-    // ----------------------- Render Code ------------------------
 }
-
-
-
-
 
 function getCard(data) {
     return `
     <div class="card">
         <img src="${data.flags.png}" alt="">
+        <div>
         <h6>${data.name.official}</h6>
-    </div>
-    `
+        <span class="pop">Population: ${(data.population / 1.0e+6).toFixed(2)} M</span>
+        </div>
+    </div>`
 }
 

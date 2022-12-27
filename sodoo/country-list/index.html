@@ -15,16 +15,19 @@
 
         <input id="input" type="text" placeholder="Search">
         <input type="button" value="search" onclick="searchFunc(this)">
-        <!-- <button id="search">Search</button> -->
+        <button id="rank" onclick="searchFunc(this)">Эрэмбэлэх</button>
 
-        <select id="cars" name="carlist" form="carform">
-            <option value="volvo">Asia</option>
-            <option value="saab">Africa</option>
-            <option value="opel">Europe</option>
-            <option value="audi">North America</option>
-            <option value="audi">North America</option>
-            <option value="audi">South America</option>
+        <select id="continents">
+            <option value="">All Continents</option>
+            <option>Asia</option>
+            <option>Africa</option>
+            <option>North America</option>
+            <option>South America</option>
+            <option>Europe</option>
+            <option>Antarctica</option>
+            <option>Oceania</option>
         </select>
+        <p id="howMany"></p>
     </div>
     <div id="conAll" class="container">
 
