@@ -5,6 +5,7 @@ fetch('https://restcountries.com/v3.1/all')
     .then((country) => {
         data = country
         // console.log(data);
+        console.log('called');
         // ----------------------- Render Code ------------------------
         const conAllDom = document.getElementById('conAll');
         conAllDom.innerHTML = '';
