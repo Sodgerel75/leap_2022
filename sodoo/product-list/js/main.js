@@ -17,12 +17,15 @@ fetch('https://dummyjson.com/products')
 
 function getCard(data) {
     return `
-        <div class="card">
-            <img src="${data.images[0]}" alt="">
-            <h6>${data.title}</h6>
-            <h6>Price: ${data.price} USD</h6>
-            <p id="desc">${data.description}</p>
-        </div>
+<div>        <div class="card">
+<img src="${data.images[0]}" alt="">
+<h5>${data.title}</h5>
+<h6>Price: ${data.price} USD</h6>
+<p id="desc">${data.description}</p>
+
+</div>
+<button class="btn" href="#">ADD TO CARD</button>
+</div>
         `
 }
 
