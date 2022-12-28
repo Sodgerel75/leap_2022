@@ -1,5 +1,5 @@
 let animeData = [];
-let pagiData = [];
+let pagiData = {};
 let page = 1;
 async function callURL(event) {
     let pageNum = event.text
@@ -22,7 +22,7 @@ async function callURL(event) {
 }
 callURL(page)
 
-console.log(animeData);
+console.log('Data 1-----------------', animeData);
 
 
 let conPagiDom = document.getElementById('pagination');
@@ -32,9 +32,9 @@ function getPagi() {
     let pre = ` <a href="#" onclick="callURL(this)"><i class="bi bi-caret-left"></i></a>`;
     conPagiDom.innerHTML += pre;
     for (let i = 0; i < 10; i++) {
-        console.log('test');
+        // console.log('test');
         let links = ` <a href="#" onclick="callURL(this)">${i + 1}</a>`;
-        console.log(links);
+        // console.log(links);
         conPagiDom.innerHTML += links;
     }
     let next = ` <a href="#" onclick="callURL(this)"><i class="bi bi-caret-right"></i></a>`;
