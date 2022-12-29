@@ -1,124 +1,3 @@
-let animeData = [];
-let pagiData = {};
-let page = 1;
-async function callURL(event) {
-    let pageNum = event.text
-    console.log(pageNum);
-    if (pageNum == undefined) {
-        pageNum = 1;
-    }
-    const fetchedData = await fetch(`https://api.jikan.moe/v4/top/anime?page=${pageNum}`)
-    const fetchedJSON = await fetchedData.json();
-    animeData = fetchedJSON.data;
-    pagiData = fetchedJSON.pagination.current_page;
-    console.log(animeData);
-    console.log('Current Page = ', pagiData);
-    const conAllDom = document.getElementById('conAll');
-    let result = ''
-    animeData.map((element, index) => {
-        result += getCard(element, index);
-    })
-    conAllDom.innerHTML = result; // Last Render
-}
-callURL(page)
-console.log(page);
-console.log('Data 1-----------------', animeData);
-
-
-let conPagiDom = document.getElementById('pagination');
-console.log(conPagiDom);
-
-function getPagi(page) {
-    let pre = ` <a href="#" onclick="callURL(this)"><i class="bi bi-caret-left"></i></a>`;
-    conPagiDom.innerHTML += pre;
-    for (let i = 0; i < 10; i++) {
-        // console.log('test');
-        if (page == i + 1) {
-            let links = ` <a href="#" class="active" onclick="callURL(this)">${i + 1}</a>`;
-        } else {
-            links = ` <a href="#" onclick="callURL(this)">${i + 1}</a>`;
-        }
-        // console.log(links);
-        conPagiDom.innerHTML += links;
-    }
-    let next = ` <a href="#" onclick="callURL(this)"><i class="bi bi-caret-right"></i></a>`;
-    conPagiDom.innerHTML += next;
-}
-
-getPagi()
-
-
-
-// let page = fetch('https://api.jikan.moe/v4/top/anime');
-// page
-//     .then((result) => result.json())
-//     .then((topAnimes) => {
-//         // console.log(topAnimes);
-//         const top25 = topAnimes.data;
-//         console.log(top25);
-//         const conAllDom = document.getElementById('conAll');
-//         let result = ''
-//         top25.map((element, index) => {
-//             result += getCard(element, index);
-//         })
-
-// conAllDom.innerHTML = result; // Last Render
-
-let buttons = document.getElementsByClassName('showMore1');
-var btnsArr = Array.prototype.slice.call(buttons);
-// console.log(btnsArr);
-
-let buttonsMin = document.getElementsByClassName('showMore2');
-var btnsArrMin = Array.prototype.slice.call(buttonsMin);
-// console.log(btnsArrMin);
-
-btnsArr.map((btn, idx) => {
-    btn.addEventListener('click', (event) => {
-        const syn = document.getElementById(`synopsis_${idx}`)
-        syn.style = 'display: none';
-
-        const syn2 = document.getElementById(`synopsisDe_${idx}`)
-        syn2.style = 'display: block';
-
-        const buttonMin = document.getElementById(`min_${idx}`)
-        buttonMin.style = 'display: block';
-        const buttonMax = document.getElementById(`${idx}`)
-        buttonMax.style = 'display: none';
-    })
-})
-
-btnsArrMin.map((btn, idx) => {
-    btn.addEventListener('click', (event) => {
-        const syn = document.getElementById(`synopsis_${idx}`)
-        syn.style = 'display: block';
-
-        const syn2 = document.getElementById(`synopsisDe_${idx}`)
-        syn2.style = 'display: none';
-
-        const buttonMin = document.getElementById(`min_${idx}`)
-        buttonMin.style = 'display: none';
-        const buttonMax = document.getElementById(`${idx}`)
-        buttonMax.style = 'display: block';
-    })
-})
-// })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // let data = [];
 
 // async function getData() {
@@ -128,6 +7,125 @@ btnsArrMin.map((btn, idx) => {
 //     // console.log(data);
 // }
 // getData();
+
+
+
+let animeData = [];
+let pagiData = {};
+
+let pageNum = 1;
+let currentPage = pageNum
+
+async function callURL(event) {
+    console.log(event.id);
+    if (event.id == 'next') {
+        console.log(' pre test');
+        console.log(pageNum);
+        console.log(currentPage);
+        pageNum = Number(currentPage) + 1;
+    } else if (event.id == 'pre') {
+        pageNum = Number(currentPage) - 1;
+    } else {
+        pageNum = event.text
+    }
+
+    currentPage = pageNum
+
+
+    console.log(pageNum);
+    if (pageNum == undefined || pageNum < 1) {
+        pageNum = 1;
+        currentPage = 1;
+    }
+    if (pageNum >= 10) {
+        pageNum = 10;
+        currentPage = 10;
+    }
+
+
+    const fetchedData = await fetch(`https://api.jikan.moe/v4/top/anime?page=${pageNum}`)
+    const fetchedJSON = await fetchedData.json();
+    animeData = fetchedJSON.data;
+    pagiData = fetchedJSON.pagination.current_page;
+    console.log(animeData);
+    // console.log('Current Page = ', pagiData);
+    const conAllDom = document.getElementById('conAll');
+    let result = ''
+    animeData.map((element, index) => {
+        result += getCard(element, index);
+    })
+    conAllDom.innerHTML = result; // Last Render
+    let buttons = document.getElementsByClassName('showMore1');
+    var btnsArr = Array.prototype.slice.call(buttons);
+    // console.log(btnsArr);
+
+    let buttonsMin = document.getElementsByClassName('showMore2');
+    var btnsArrMin = Array.prototype.slice.call(buttonsMin);
+    // console.log(btnsArrMin);
+
+    btnsArr.map((btn, idx) => {
+        btn.addEventListener('click', (event) => {
+            const syn = document.getElementById(`synopsis_${idx}`)
+            syn.style = 'display: none';
+
+            const syn2 = document.getElementById(`synopsisDe_${idx}`)
+            syn2.style = 'display: block';
+
+            const buttonMin = document.getElementById(`min_${idx}`)
+            buttonMin.style = 'display: block';
+            const buttonMax = document.getElementById(`${idx}`)
+            buttonMax.style = 'display: none';
+        })
+    })
+
+    btnsArrMin.map((btn, idx) => {
+        btn.addEventListener('click', (event) => {
+            const syn = document.getElementById(`synopsis_${idx}`)
+            syn.style = 'display: block';
+
+            const syn2 = document.getElementById(`synopsisDe_${idx}`)
+            syn2.style = 'display: none';
+
+            const buttonMin = document.getElementById(`min_${idx}`)
+            buttonMin.style = 'display: none';
+            const buttonMax = document.getElementById(`${idx}`)
+            buttonMax.style = 'display: block';
+        })
+    })
+
+    getPagi(pageNum)
+}
+
+
+callURL(pageNum)
+
+console.log('Data 1-----------------', animeData);
+
+
+let conPagiDom = document.getElementById('pagination');
+console.log(conPagiDom);
+
+function getPagi(page) {
+    conPagiDom.innerHTML = '';
+    let pre = ` <a id="pre" href="#" onclick="callURL(this)"><i class="bi bi-caret-left"></i></a>`;
+    conPagiDom.innerHTML += pre;
+    let links;
+    for (let i = 0; i < 10; i++) {
+        // console.log('test');
+        if (page == i + 1) {
+            links = ` <a href="#" class="active" onclick="callURL(this)">${i + 1}</a>`;
+            console.log(' test if');
+        } else {
+            links = ` <a href="#" onclick="callURL(this)">${i + 1}</a>`;
+            console.log(' test else');
+        }
+        // console.log(links);
+        conPagiDom.innerHTML += links;
+    }
+    let next = ` <a id="next" href="#" onclick="callURL(this)"><i class="bi bi-caret-right"></i></a>`;
+    conPagiDom.innerHTML += next;
+}
+
 
 
 
@@ -165,11 +163,7 @@ async function findGenre(event) {
         render += getCard(element, index);
         conAllDom.innerHTML = render;
     })
-    // ----------------- Render Code -------------------------
 }
-
-
-
 
 
 
@@ -191,28 +185,11 @@ async function searchFunc(event) {
         render += getCard(element, index);
         conAllDom.innerHTML = render;
     })
-    // ----------------- Render Code -------------------------
 }
 
 
 
-// document.addEventListener('keydown', function (event) {
-//     alert(event.keyCode);
-//     searchFunc();
-// });
-
-
-
 function getCard(data, index) {
-
-
-
-
-
-
-
-
-
     // console.log(data.genres);
     const genres = data.genres.map(genre => {
         const result = `<a href="#">${genre.name}</a>`
@@ -240,8 +217,6 @@ function getCard(data, index) {
         const result = `${res.url}`
         return result;
     })
-
-    // data.studios[0].url
 
     return `
 

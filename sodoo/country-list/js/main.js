@@ -4,7 +4,7 @@ fetch('https://restcountries.com/v3.1/all')
     .then(res => res.json())
     .then((country) => {
         data = country
-        // console.log(data);
+        console.log(data);
         console.log('called');
         // ----------------------- Render Code ------------------------
         const conAllDom = document.getElementById('conAll');
@@ -41,12 +41,37 @@ function selectCountry(event) {
         conAllDom.innerHTML += getCard(element)
     })
 
-    let too = [];
-    for (let i = 0; i < selectResult.length; i++) {
-        too.push(selectResult[0].population)
-    }
-    console.log(too);
+    // let too = [];
+    // for (let i = 0; i < selectResult.length; i++) {
+    //     too.push(selectResult[0].population)
+    // }
+    // console.log(too);
 }
+
+
+const ranksSelecter = document.getElementById('ranks')
+ranksSelecter.addEventListener('change', function handleChange(event) {
+    rankFunc(event);
+})
+
+// const rankedResult = data.population.sort();
+// console.log(rankedResult);
+
+function rankFunc(event) {
+    console.log(event.target.value);
+    if (event.target.value == 'Хүн амын тоогоор') {
+        console.log('----TEST-HUN AM-------');
+    }
+
+
+
+
+
+}
+
+
+
+
 
 async function searchFunc(event) {
     const searchVal = document.getElementById('input').value;
