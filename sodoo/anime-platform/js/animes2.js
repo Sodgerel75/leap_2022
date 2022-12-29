@@ -28,12 +28,16 @@ console.log('Data 1-----------------', animeData);
 let conPagiDom = document.getElementById('pagination');
 console.log(conPagiDom);
 
-function getPagi() {
+function getPagi(page) {
     let pre = ` <a href="#" onclick="callURL(this)"><i class="bi bi-caret-left"></i></a>`;
     conPagiDom.innerHTML += pre;
     for (let i = 0; i < 10; i++) {
         // console.log('test');
-        let links = ` <a href="#" onclick="callURL(this)">${i + 1}</a>`;
+        if (page == i + 1) {
+            let links = ` <a href="#" class="active" onclick="callURL(this)">${i + 1}</a>`;
+        } else {
+            links = ` <a href="#" onclick="callURL(this)">${i + 1}</a>`;
+        }
         // console.log(links);
         conPagiDom.innerHTML += links;
     }

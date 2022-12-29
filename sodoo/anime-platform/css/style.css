@@ -164,7 +164,7 @@ input {
     text-decoration: none;
 }
 
-.pagination a.active {
+.active {
     background-color: #4f74c8;
     color: white;
     border-radius: 5px;
