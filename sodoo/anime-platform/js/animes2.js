@@ -21,7 +21,7 @@ async function callURL(event) {
     conAllDom.innerHTML = result; // Last Render
 }
 callURL(page)
-
+console.log(page);
 console.log('Data 1-----------------', animeData);
 
 
