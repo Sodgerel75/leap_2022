@@ -1,15 +1,3 @@
-// let data = [];
-
-// async function getData() {
-//     const fetchedData = await fetch('https://api.jikan.moe/v4/top/anime')
-//     const fetchedJSON = await fetchedData.json();
-//     data = fetchedJSON.data;
-//     // console.log(data);
-// }
-// getData();
-
-
-
 let animeData = [];
 let pagiData = {};
 
