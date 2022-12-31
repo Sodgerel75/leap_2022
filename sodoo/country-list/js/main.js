@@ -61,6 +61,16 @@ function rankFunc(event) {
     console.log(event.target.value);
     if (event.target.value == 'Хүн амын тоогоор') {
         console.log('----TEST-HUN AM-------');
+        console.log(data);
+        const hunAm = data.sort(el =>
+            el.population)
+
+        console.log(hunAm);
+
+
+    }
+    if (event.target.value == 'Газар нутгийн хэмжээгээр') {
+        console.log('----TEST-GAZAR NUTAG-------');
     }
 
 
