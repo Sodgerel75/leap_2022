@@ -61,22 +61,33 @@ function rankFunc(event) {
     console.log(event.target.value);
     if (event.target.value == 'Хүн амын тоогоор') {
         console.log('----TEST-HUN AM-------');
-        console.log(data);
-        const hunAm = data.sort(el =>
-            el.population)
-
+        const hunAm = data.sort((a, b) => {
+            return b.population - a.population
+        }
+        )
         console.log(hunAm);
-
+        // ----------------------- Render Code ------------------------
+        const conAllDom = document.getElementById('conAll');
+        conAllDom.innerHTML = '';
+        hunAm.map((element) => {
+            conAllDom.innerHTML += getCard(element)
+        })
 
     }
     if (event.target.value == 'Газар нутгийн хэмжээгээр') {
         console.log('----TEST-GAZAR NUTAG-------');
+        const gazarNutag = data.sort((a, b) => {
+            return b.area - a.area
+        }
+        )
+        console.log(gazarNutag);
+        // ----------------------- Render Code ------------------------
+        const conAllDom = document.getElementById('conAll');
+        conAllDom.innerHTML = '';
+        gazarNutag.map((element) => {
+            conAllDom.innerHTML += getCard(element)
+        })
     }
-
-
-
-
-
 }
 
 
@@ -108,11 +119,15 @@ async function searchFunc(event) {
 function getCard(data) {
     return `
     <div class="card">
-        <img src="${data.flags.png}" alt="">
-        <div>
-        <h6>${data.name.official}</h6>
-        <span class="pop">Population: ${(data.population / 1.0e+6).toFixed(2)} M</span>
+        <div class="card-head">
+            <img src="${data.flags.png}" alt="">
+            <h6>${data.name.official}</h6>
         </div>
+        <div class="popu">
+            <span class="pop">Population: ${(data.population / 1.0e+6).toFixed(2)} M</span>
+            <span class="pop">Area: ${(data.area / 1.0e+6).toFixed(2)} M</span>
+        </div>
+        
     </div>`
 }
 
