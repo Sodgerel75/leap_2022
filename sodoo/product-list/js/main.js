@@ -29,7 +29,6 @@ function getCard(data) {
         `
 }
 
-
 const searchValue = document.getElementById('input');
 searchValue.addEventListener('change', function handleChange(event) {
     console.log(event.target.value);
@@ -38,10 +37,8 @@ searchValue.addEventListener('change', function handleChange(event) {
 
 function searchFunc(event) {
     console.log('test');
-
     const searchValue = document.getElementById('input').value.toLowerCase();
     console.log(searchValue);
-
     const searchResult = data.filter(el =>
         el.title.toLowerCase().includes(searchValue)
     )
