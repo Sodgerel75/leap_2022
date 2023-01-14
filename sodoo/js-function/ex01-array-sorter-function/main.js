@@ -29,4 +29,10 @@ function sortingAlgorithm(arr) {
     return arr;
 }
 
+document.write("<br><br><br>Original array: ["
+    + (sortArray).join(", ") + "]<br>");
 console.log(sortingAlgorithm(sortArray));
+arr = sortingAlgorithm(sortArray);
+
+document.write("Sorted array: ["
+    + arr.join(", ") + "]<br>");

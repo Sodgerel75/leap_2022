@@ -44,20 +44,6 @@ function findSum(arr) {
 }
 console.log(findSum(a)); // 15
 
-function isPrime(num) {
-    if (num < 2) {
-        return false;
-    }
-    for (let i = 2; i < Math.sqrt(num); i++) {
-        if (num % i === 0) {
-            return false;
-        }
-    }
-    return true;
-}
-console.log(isPrime(9));
-console.log(isPrime(10));
-
 
 console.log("ABC".toLocaleLowerCase());
 
@@ -69,3 +55,38 @@ function strToLowerCase(arr) {
     return arr;
 }
 console.log(strToLowerCase(b));
+
+
+
+
+// function isPrime(num) {
+//     if (num < 2) {
+//         return false;
+//     }
+//     for (let i = 2; i < Math.sqrt(num); i++) {
+//         if (num % i === 0) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+
+function isPrime(num) {
+    if (num <= 1) return false;
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(isPrime(7)); // true
+console.log(isPrime(10)); // false
+
+for (let i = 1; i <= 20; i++) {
+    if (isPrime(i)) {
+        console.log(i);
+    }
+}
