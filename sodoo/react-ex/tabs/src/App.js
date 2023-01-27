@@ -53,9 +53,9 @@ function App() {
               <h2 className="job-title">{el.title}</h2>
               <p className="company-name">{el.company}</p>
               <p className="date">{el.dates}</p>
-              {el.duties.map((el) => {
+              {el.duties.map((el, index) => {
                 return (
-                  <div className="text">
+                  <div key={index} className="text">
                     <AiFillCaretRight />
                     <p>{el}</p>
                   </div>
